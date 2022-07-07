@@ -1,0 +1,432 @@
+$base_fz: 16;
+@mixin fz($size_in_px){
+    font-size:($size_in_px/$base_fz)+rem;
+}
+@media screen and (max-width: 1500px){
+    footer{
+            .fot_top{
+                display: grid;
+                grid-template-columns: 3fr 2fr;
+                align-items: start;
+                padding-top: 114px;
+                .contact,
+                .subscribe{
+                    padding-top: 40px;
+                }
+            }
+        }
+        .faqs {
+            grid-template-columns: 1fr 2fr;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: 470px 1fr;
+            gap: 0;
+        }
+        .latest .blog_post_content {
+            position: relative;
+            width: 275px;
+        }
+    }
+    
+    @media screen and (max-width: 1300px){
+    .gallery {
+        max-width: 1063px;
+        grid-gap: 18px;
+        }
+    
+        .latest .blog_post_content {
+            width: 70%;
+            left: 18px;
+            height: 350px;
+        }
+        .latest .btn {
+            margin-top: 62px;
+        }
+        .clients .counter_item h5 {
+            font-size: 6rem;
+        }
+    }
+    @media screen and (max-width: 1100px){
+        h2{
+            @include fz(40);
+        }
+        h3{
+            @include fz(25);
+        }
+        h4{
+            @include fz(20);
+            line-height: 180.4%;
+        }
+        .invest {
+            .slider{
+                h1 {
+                font-size: 3.625rem;
+                padding: 180px 0 72px 40px;
+                width: 452px;
+                }
+                .slider_item {
+                    gap: 0px;
+                }
+                p{
+                    padding: 17px 17px;
+                }
+            }
+        }
+        .btn {
+        width: 150px;
+        height: 58px;
+        @include fz(12);
+        padding: 10px;
+        }
+        #portfolio {
+            grid-template-columns: 1fr;
+            gap: 68px;
+        }
+        .gallery{
+            margin-top: 70px;
+        }
+        .services {
+            grid-template-columns:1fr;
+            gap: 40px;
+        }
+        #aboutMe {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding-left: 10px;
+            h2{
+                padding-bottom: 20px;
+            }
+        }
+        .fot_top .logo_soc {
+            width: 360px;
+            margin-right: 20px;
+        }
+        .faqs {
+            grid-template-columns: 1fr;
+            padding-top: 30px;
+            &_item{
+                padding-bottom: 30px;
+                h2{
+                    padding-bottom: 0;
+                }
+                p{
+                    width: 100%;
+                }
+            }
+        }
+        .latest p {
+            width: 100%;
+            padding-bottom: 80px;
+        }
+        .invest .slider_item {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+        .latest .blog_post_content {
+            left: 7px;
+        }
+        .contactMe img {
+            right: -30px;
+        }
+    }
+    
+    @media screen and (max-width: 900px){
+        .fot_top .subscribe .send {
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            width: 0;
+            .btn{
+                margin-top: 10px;
+            }
+        }
+        .clients .comment{
+                svg {
+                    height: 80px;
+                    width: 100px;
+                }
+        }
+        .latest{
+            .blog_post_content h4 {
+                @include fz(20);
+            }
+            .blog_post_content {
+                width: 70%;
+                left: 0;
+            }
+        }
+        .contactMe img {
+            display: none;
+        }
+        .clients img {
+            display: none;
+        }
+        .clients .comment_item {
+            padding: 128px 10px 40px 82px;
+            right: 0;
+            top: 0;
+        }
+        .clients .counter_item {
+            align-items: center;
+            flex-direction: column;
+        }
+        .latest .blog_post_content {
+            height: 450px;
+        }
+    }
+    @media screen and (max-width: 760px){
+        .back_img {
+            background: url(../img/Rectangle_sect1.png) right top/100% no-repeat;
+        }
+        #aboutMe {
+            margin-top: 120px;
+            .btn{
+                margin-bottom: 120px;
+            }
+        }
+        .services {
+            margin-top: 94px;
+        }
+       
+        .fot_top .subscribe {
+            p {
+                width: 181px;
+            }
+            .send input {
+                width: 198px;
+            }
+        }
+        .clients .comment_item {
+            width: 300px;
+            p {
+                width: 300px;
+            }
+            h5 {
+                font-size: 3,5rem;
+            }
+        }
+        .clients{
+            .counter {
+                margin-bottom: 60px;
+            }
+            .comment_item {
+                h5 {
+                    font-size: 4rem;
+                }
+            }    
+        }
+        .clients .counter {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .contactMe {
+            grid-template-columns: 1fr;
+            margin-left: 47px;
+            width: 500px;
+                &_item{
+                    padding: 0px;
+                    &_form {
+                    width: 450px;
+                    column-gap: 12px;
+                }
+             }
+        }
+        .contactMe_item_form input,
+        .contactMe_item_form textarea {
+            width: 211px;
+        }
+        .contactMe_item_form .mess {
+        width: 455px;
+        }
+        .latest .blog {
+            display: grid;
+            grid-template-rows: repeat(3,1fr);
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            &_post_content {
+                width: 70%;
+                left: 40px;
+                height: auto;
+            }
+        }
+        .header{
+            nav {
+                display: none;
+            }
+        }
+        .faqs {
+            padding-top: 0;
+            margin-bottom: 120px;
+        }
+        footer{
+            .fot_top {
+                display: flex;
+                flex-direction: column;
+                padding-top: 40px;
+                .links {
+                    padding-top: 30px;
+                }
+            }
+            .fot_bot {
+                display: flex;
+                flex-direction: column;
+                padding-top: 60px;
+                padding-bottom: 30px;
+            }   
+        }
+            .services_blok {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4,1fr);
+            }
+            .gallery {
+                grid-template-columns: repeat(2,1fr);
+            }
+            .invest .slider h1 {
+                font-size: 3.625rem;
+                padding: 180px 0 32px 15px;
+            }
+            #portfolio ul {
+                display: flex;
+                gap: 10px;
+            }
+    }
+    @media screen and (max-width: 600px){
+        .invest .slider h1 {
+            font-size: 2.625rem;
+            padding: 180px 0 72px 40px;
+            width: 309px;
+        }
+        .contactMe {
+            margin-left: 0;
+        }
+        .latest .blog_post_content {
+        width: 70%;
+        left: 23px;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        .gallery {
+            max-width: 480px;
+        }
+        .invest .slider h1 {
+            font-size: 2rem;
+            width: 205px;
+        }
+        .fot_bot{
+            @include fz(12);
+        }
+    }
+    @media screen and (max-width: 550px){
+        #portfolio ul {
+            grid-template-columns: repeat(2,1fr);
+        }
+        h3 {
+            @include fz(18);
+        }
+        .fot_top .logo_soc {
+             width: 289px;
+        }
+        .fot_top .subscribe p,
+        .fot_top .logo_soc p
+         {
+            width: 333px;
+        }
+        .latest .btn {
+            margin-top: 0;
+        }
+        .contactMe_item_form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contactMe_item_form .mess,
+        .contactMe_item_form input, 
+        .contactMe_item_form textarea {
+            width: 300px;
+        }
+        .contactMe {
+            margin-left: 47px;
+            margin-bottom: 188px;
+            margin-top: 100px;
+        }
+        .contactMe {
+            width: 300px;
+            &_item{
+                p {
+                    margin-bottom: 20px;
+                    width: 320px;
+                }
+                &_form {
+                    width: 320px;
+                }
+            } 
+        }
+    }
+    @media screen  and (max-width: 400px) {
+        #side_block {
+            width: 290px;
+        }
+        .clients .comment_item {
+            padding: 81px 10px 0px 26px;
+        }
+        .contactMe_item p {
+            width: 251px;
+        }
+        .contactMe {
+            margin-left: 13px;
+        }
+        .clients .comment_item, .clients .comment_item p {
+            width: 243px;
+        }
+        #portfolio ul {
+            width: 291px;
+        }
+        .fot_top .subscribe p,
+        .fot_top .logo_soc p
+         {
+            width: 300px;
+        }
+        .fot_top .contact_element a {
+            @include fz(14);
+        }
+        .blog_post_content {
+            left: 9px;
+        }
+        .latest .blog_post_content {
+            left: 9px;
+        }
+        .contactMe_item_form .mess, .contactMe_item_form input, .contactMe_item_form textarea {
+            width: 203px;
+            height: 30px;
+        }
+        .contactMe_item_form {
+            width: 204px;
+        }
+    }
+    @media screen and (max-width: 320px){
+        .latest .blog_post_content {
+            left: 6px;
+        }
+        .services_blok .card {
+            width: 220px;
+            padding: 19px 30px;
+        }
+        .fot_top {
+            .logo_soc {
+                width: 280px;
+                margin-right: 0;
+                .social a {
+                    margin-right: 10px;
+                }
+            }
+            .contact_element {
+                @include fz(14);
+                margin-right: 0px;
+            }
+        }
+        .invest {
+            margin-left: 0;
+        }
+    }
