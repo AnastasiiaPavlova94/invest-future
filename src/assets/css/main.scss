@@ -592,7 +592,7 @@ p{
 .faqs{
     display: grid;
     grid-template-columns: 1fr 850px;
-    margin-bottom: 260px;
+    margin-bottom: 100px;
     &_item{
         h2{
             padding-bottom: 32px;
@@ -602,6 +602,7 @@ p{
         }
     }
     &_qvesh{
+        height: 900px;
         &_item{
         display: grid;
         grid-template-columns: 1fr 20px;
