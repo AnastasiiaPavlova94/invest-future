@@ -3,7 +3,7 @@
     <div class="container">
       <div class="services" id="sr">
         <div>
-          <h2>view my services</h2>
+          <h2>Vuiws my services</h2>
           <p>
             Id at urna non viverra eu volutpat porttitor elementum. Viverra
             senectus dui ultricies dolor. Varius nibh velit pellentesque sapien,
@@ -49,15 +49,21 @@
       <div class="clients">
         <div class="counter">
           <div class="counter_item">
-            <h5>750</h5>
+            <h5>
+              {{ rez1 }}
+            </h5>
             <span>Projects Done</span>
           </div>
           <div class="counter_item">
-            <h5>315</h5>
+            <h5>
+              {{ rez2 }}
+            </h5>
             <span>Regular Clients</span>
           </div>
           <div class="counter_item">
-            <h5>19</h5>
+            <h5>
+              {{ rez3 }}
+            </h5>
             <span>Years Experience</span>
           </div>
         </div>
@@ -111,7 +117,7 @@
             senectus dui ultricies dolor.
           </p>
         </div>
-    <div class="faqs_qvesh">
+        <div class="faqs_qvesh">
           <vue-collapsible-panel-group>
             <div class="faqs_qvesh_item">
               <vue-collapsible-panel :expanded="true">
@@ -121,7 +127,7 @@
                     :class="(expanded = true ? 'icon-minus' : 'icon-plus')"
                   ></span>
                 </template>
-                <template #content> 
+                <template #content>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                     nisi, augue urna, mauris elementum ligula semper enim.
@@ -206,14 +212,52 @@ export default {
     VueCollapsiblePanelGroup,
     VueCollapsiblePanel,
   },
-  //    data() {
-  // 		return {
-  // 			counter: 0
-  // 		}
-  // 	},
-  // 	created(){
-  // 		counter++
-  // 	}
+  data() {
+    return {
+      step: 1,
+      num: 750,
+      num2: 350,
+      num3: 19,
+      rez1: 0,
+      rez2: 0,
+      rez3: 0,
+      time: 1000,
+      ifNam: false,
+    };
+  },
+  created() {
+    this.toggleFixsedScroll();
+  },
+  methods: {
+    toggleFixsedScroll() {
+      this.ifNam = window.scrollY > 1000;
+      this.startNum();
+    },
+    startNum() {
+      this.step == 0 ? (this.step = 1) : this.step;
+      const tm = Math.random(this.time / (this.num / this.step));
+      let interval = setInterval(() => {
+        this.rez1 = this.rez1 + this.step;
+        if (this.rez1 == this.num) {
+          clearInterval(interval);
+        }
+      }, tm);
+
+      let interval2 = setInterval(() => {
+        this.rez2 = this.rez2 + this.step;
+        if (this.rez2 == this.num2) {
+          clearInterval(interval2);
+        }
+      }, tm);
+
+      let interval3 = setInterval(() => {
+        this.rez3 = this.rez3 + this.step;
+        if (this.rez3 == this.num3) {
+          clearInterval(interval3);
+        }
+      }, tm);
+    },
+  },
 };
 </script>
 

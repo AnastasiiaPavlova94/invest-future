@@ -90,7 +90,7 @@ $base_fz: 16;
             grid-template-columns:1fr;
             gap: 40px;
         }
-        #aboutMe {
+        .aboutMe {
             display: grid;
             grid-template-columns: 1fr;
             padding-left: 10px;
@@ -179,7 +179,7 @@ $base_fz: 16;
         .back_img {
             background: url(../img/Rectangle_sect1.png) right top/100% no-repeat;
         }
-        #aboutMe {
+        .aboutMe {
             margin-top: 120px;
             .btn{
                 margin-bottom: 120px;
