@@ -22,6 +22,7 @@
 
 
 <style lang="scss">
+
 $font_Prata: 'Prata';
 $base_fz: 16;
 @mixin fz($size_in_px) {

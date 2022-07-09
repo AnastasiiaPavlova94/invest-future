@@ -59,7 +59,10 @@
 // </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
+.container{
+  padding-bottom: 150px;
+}
 .grid{
   display: grid;
   grid-template-columns: 45% 55%;
@@ -88,7 +91,7 @@
   
 }
   .btn{
-      margin: 20px 0 150px 135px;
+      margin: 20px 0 0 135px;
     }
 </style>
 
