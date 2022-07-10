@@ -2,6 +2,8 @@
 
   <about-serv />
   
+  <counter-serv />
+  
   <comment-serv />
   
   <faqs-serv />
@@ -10,11 +12,15 @@
 
 <script>
 import FaqsServ from '../components/FaqsServ.vue';
+import CounterServ from '../components/CounterServ.vue';
 import CommentServ from '../components/CommentServ.vue';
 import AboutServ from '../components/AboutServ.vue';
+
+
 export default {
   components: {
     FaqsServ,
+    CounterServ,
     CommentServ,
     AboutServ,
   }

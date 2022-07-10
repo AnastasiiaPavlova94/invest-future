@@ -12,8 +12,8 @@
 		</div>
 		<div class="services_blok" >
 		<div class="card" v-for="(serv, index) in AboutServData" :key="index">
-			<h4>{{serv.title}}</h4>
-			<p>{{serv.text}}</p>
+			<h4>{{ serv.title }}</h4>
+			<p>{{ serv.text }}</p>
 		</div>
 		</div>
 	</div>
