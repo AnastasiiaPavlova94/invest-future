@@ -4,15 +4,13 @@
 			<div class="clients">
 					<div class="counter">
 						<div class="counter_item" v-for="(cnt, index) in CountertServData" :key="index">
-
-							<!-- <template>
-								<animated-number
-									:value="value"
-									:formatValue="formatToPrice"
-									:duration="ctn.counter"
-								/>
-							</template> -->
-						<h5>{{ cnt.counter }}</h5>
+							<!-- <h5></h5> -->
+							<number
+								ref="number1"
+								:from="100"
+								:to="cnt.counter"
+								:format="theFormat"
+								easing="Power1.easeOut"/>
 						<span>{{ cnt.type }}</span>
 						</div>
 				</div>
@@ -23,17 +21,14 @@
 
 <script>
 import axios from "axios";
-// import AnimatedNumber from "animated-number-vue";
-// components: {
-// 		AnimatedNumber
-// 		},
+
+
 
 export default {
 	name: "CountertServ",
 	data() {
 		return {
 		CountertServData: [],
-		value: 1000,
 		};
 	},
 	created() {
@@ -43,9 +38,15 @@ export default {
 		});
 	},
 	methods: {
-		formatToPrice(value) {
-		return `<h5> ${value.toFixed(2)} </h5>`;
-		}
+		theFormat(number) {
+            return number.toFixed(2);
+        },
+        completed() {
+            console.log('Animation ends!');
+        },
+        playAnimation() {
+            this.$refs.number2.play()
+        }
 	}
 };
 </script>
