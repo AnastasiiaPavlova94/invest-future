@@ -18,7 +18,12 @@
 			
 		</slide>
 		<template #addons>
-		<navigation />	
+		<navigation />
+		<!-- <ul class="pagination">
+		<li v-for="p in pageTo" :key="p"  >
+		<button @:click="GoTo(p)" :class="{active: p===page}">0{{ p }}</button>
+		</li>
+		</ul>  -->
 		<pagination></pagination>
 		</template>
   </carousel>
@@ -41,49 +46,87 @@ export default {
 		Slide,
 		Pagination,
 		Navigation,
+		
 	},
 	data() {
 		return {
 		HomeSliderData: [],
 		count: 1,
+		page:1,
+		pageTo: 0,
 		value: 1000,
 		settings: {
 			itemsToShow: 1,
 			snapAlign: 'center',
-			
-			},
-		breakpoints: {
-      // 700px and up
-      700: {
-        itemsToShow: 3.5,
-        snapAlign: 'center',
-      },
-      // 1024 and up
-      1024: {
-        itemsToShow: 5,
-        snapAlign: 'start',
-      },
-    },
-
-		};
+			wrapAround: true,
+			}
+		}
 	},
 	created() {
 		axios
 		.get("../data/famosebild.json").then((resp) => {
 			this.HomeSliderData = resp.data;
+			this.pageTo = this.HomeSliderData.length
+			console.log(this.pageTo)
 		});
+		
 	},
+	methods: {
+		GoTo(p){	
+			console.log(p)
+		}
+	}
 };
 </script>
 
 
 <style>
+.pagination{
+	display: flex;
+	display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: -180px;
+}
+.pagination ul li{
+	display: flex;
+	display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: -180px;
+}
+.carousel__pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    opacity: 1;
+}
+
 .carousel__pagination {
     display: flex;
     flex-direction: column;
 	position: absolute;
 	top: 50%;
 	left: -187px;
+	gap: 26px;
+}
+.carousel__pagination-button {
+  
+    width: var(--vc-pgn-width);
+    height: var(--vc-pgn-height);
+    border-radius: var(--vc-pgn-height);
+    border: 0;
+    cursor: pointer;
+    background-color: var(--vc-pgn-background-color);
+}
+.carousel__slide {
+
+    align-items: flex-start;
+}
+.invest .slider h1 {
+	text-align: left;
 }
 .carousel__prev {
 	position: relative;	

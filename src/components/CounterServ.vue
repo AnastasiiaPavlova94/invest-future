@@ -5,7 +5,7 @@
 					<div class="counter">
 						<div class="counter_item" v-for="(cnt, index) in CountertServData" :key="index"  > 
 							<h5>
-								<vue3-autocounter ref='counter' :startAmount='0' :endAmount='cnt.counter' :duration='3' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true'/>
+								<vue3-autocounter ref='counter' :startAmount='0' :endAmount='cnt.counter' :duration='3' separator=',' decimalSeparator='.' :decimals='0' :autoinit='autoinit'/>
 							</h5>
 						<span>{{ cnt.type }}</span>
 						</div>
@@ -26,7 +26,15 @@ export default {
 	data() {
 		return {
 		CountertServData: [],
+		autoinit: true,
+		ifFixsed: false,
 		};
+	},
+	watch() {
+		if(window.scrollY > 100){
+			//	this.autoinit = true
+				this.start()	
+		}
 	},
 	created() {
 		axios
@@ -34,7 +42,12 @@ export default {
 			this.CountertServData = resp.data;
 
 		});
-	}
+	},
+	methods: {
+		start() {
+			this.$refs.counter.start();
+		}
+	},
 };
 </script>
 

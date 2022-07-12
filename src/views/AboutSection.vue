@@ -75,8 +75,5 @@ flex-direction: row-reverse;
     }
   
 }
-  .btn{
-      margin: 20px 0 0 135px;
-    }
 </style>
 
