@@ -1,16 +1,12 @@
 <template>
-	<section> 
+	<section>
 		<div class="container">
 			<div class="clients">
 					<div class="counter">
-						<div class="counter_item" v-for="(cnt, index) in CountertServData" :key="index">
-							<!-- <h5></h5> -->
-							<number
-								ref="number1"
-								:from="100"
-								:to="cnt.counter"
-								:format="theFormat"
-								easing="Power1.easeOut"/>
+						<div class="counter_item" v-for="(cnt, index) in CountertServData" :key="index"  > 
+							<h5>
+								<vue3-autocounter ref='counter' :startAmount='0' :endAmount='cnt.counter' :duration='3' separator=',' decimalSeparator='.' :decimals='0' :autoinit='true'/>
+							</h5>
 						<span>{{ cnt.type }}</span>
 						</div>
 				</div>
@@ -21,11 +17,12 @@
 
 <script>
 import axios from "axios";
-
-
-
+import Vue3Autocounter from 'vue3-autocounter';
 export default {
 	name: "CountertServ",
+	components: {
+		Vue3Autocounter,
+	},
 	data() {
 		return {
 		CountertServData: [],
@@ -35,18 +32,8 @@ export default {
 		axios
 		.get("../data/counter.json").then((resp) => {
 			this.CountertServData = resp.data;
+
 		});
-	},
-	methods: {
-		theFormat(number) {
-            return number.toFixed(2);
-        },
-        completed() {
-            console.log('Animation ends!');
-        },
-        playAnimation() {
-            this.$refs.number2.play()
-        }
 	}
 };
 </script>

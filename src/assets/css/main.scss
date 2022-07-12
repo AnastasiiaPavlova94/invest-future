@@ -388,7 +388,7 @@ p{
               display: flex;
               justify-content: center;
               align-items: flex-end;
-              h5{
+              h5 span{
                   font-family: $font_Prata;
                   @include fz(120);
                   line-height: 129.4%;
