@@ -46,7 +46,7 @@ $base_fz: 16;
 				line-height: 110%;
 				padding: 228px 0 72px 40px;
 				text-transform: capitalize;
-				width: 596px;
+				width: 670px;
 				color: #201F1F;
 				}
 				p{
