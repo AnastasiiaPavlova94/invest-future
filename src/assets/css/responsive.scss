@@ -102,19 +102,6 @@ $base_fz: 16;
             width: 360px;
             margin-right: 20px;
         }
-        .faqs {
-            grid-template-columns: 1fr;
-            padding-top: 30px;
-            &_item{
-                padding-bottom: 30px;
-                h2{
-                    padding-bottom: 0;
-                }
-                p{
-                    width: 100%;
-                }
-            }
-        }
         .latest p {
             width: 100%;
             padding-bottom: 80px;
@@ -256,10 +243,7 @@ $base_fz: 16;
                 display: none;
             }
         }
-        .faqs {
-            padding-top: 0;
-            margin-bottom: 120px;
-        }
+       
         footer{
             .fot_top {
                 display: flex;

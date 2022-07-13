@@ -59,51 +59,86 @@ created() {
 };
 </script>
 
-<style lang="scss" scoped>
-span {
-position: relative;
-&:after {
-	content: "";
-	width: 4px;
-	height: 20px;
-	background: black;
-	position: absolute;
-	top: 0;
-	left: 8px;
+<style lang="scss">
+.vcp__header-title{
+	span {
+		position: relative;
+		margin-bottom: 15px;
+		&:after {
+			content: "";
+			width: 4px;
+			height: 20px;
+			background: black;
+			position: absolute;
+			top: 0;
+			left: 8px;
+			transition: all .2s ease-out;
+		}
+		&::before {
+			content: "";
+			width: 20px;
+			height: 4px;
+			background: black;
+			position: absolute;
+			top: 8px;
+			left: 0px;
+		}
+	}
 }
-&::before {
-	content: "";
-	width: 20px;
-	height: 4px;
-	background: black;
-	position: absolute;
-	top: 8px;
-	left: 0px;
+.vcp__body{
+	transition: all .1s ease-out;
 }
+.vcp--expanded{
+	.vcp__header-title span::after {
+		transform: rotateZ(90deg);
+		transition: all .2s ease-out;
+	}
+
 }
 .faqs {
-display: grid;
-grid-template-columns: 1fr 850px;
-margin-bottom: 100px;
-&_item {
-	h2 {
-	padding-bottom: 32px;
-	}
-	p {
-	width: 460px;
-	}
-}
-&_qvesh {
-	// height: 900px;
-	&_item {
 	display: grid;
-	grid-template-columns: 1fr 20px;
-	padding: 30px;
-	border: 1px solid rgba(249, 249, 249, 1);
-	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.04);
-	margin-bottom: 35px;
-	align-items: center;
+	grid-template-columns: 1fr 850px;
+	margin-bottom: 100px;
+	&_item {
+		h2 {
+		padding-bottom: 32px;
+		}
+		p {
+		width: 460px;
+		}
+	}
+	&_qvesh {
+		// height: 900px;
+		&_item {
+		display: grid;
+		grid-template-columns: 1fr 20px;
+		padding: 30px;
+		border: 1px solid rgba(249, 249, 249, 1);
+		box-shadow: 0 0 20px 10px rgba(209, 209, 209, 0.333);
+		margin-bottom: 35px;
+		align-items: center;
+		}
 	}
 }
+@media screen and (max-width: 1100px){
+	.faqs {
+		grid-template-columns: 1fr;
+		padding-top: 30px;
+			&_item{
+			padding-bottom: 30px;
+				h2{
+				padding-bottom: 0;
+				}
+				p{
+				width: 100%;
+				}
+		}
+	}
+}
+@media screen and (max-width: 760px){
+.faqs {
+	padding-top: 0;
+	margin-bottom: 120px;
+	}
 }
 </style>

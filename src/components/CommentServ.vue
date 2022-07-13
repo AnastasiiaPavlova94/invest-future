@@ -62,3 +62,69 @@ created() {
 },
 };
 </script>
+
+<style lang="scss">
+$base_fz: 16;
+@mixin fz($size_in_px){
+	font-size:($size_in_px/$base_fz)+rem;
+}
+.clients{
+	.comment{
+		display: grid;
+		grid-template-columns: 70% 30%;
+		img {
+			height: 870px;
+			max-width: 1100px;
+			position: relative;
+			top: 0;
+			right: 146px;
+		}
+		&_item{
+			display: grid;
+			padding: 119px 10px 40px 160px;
+			background-color: #ffffff;
+			position: relative;
+			right: 501px;
+			top: 100px;
+			width: 500px;
+			.sum_dots{
+				display: flex;
+
+			}
+			svg{
+				margin-top: 42px;
+				margin-left: -28px;
+			}
+			p{
+				width: 604px;
+				padding-bottom: 33px;
+				font-weight: 300;
+				@include fz(22);
+				line-height: 222.4%;
+				letter-spacing: 0.02em;
+				color: #5B5B5B;
+			}
+			h4{
+				font-weight: 500;
+				@include fz(26);
+				line-height: 212.4%;
+				text-transform: capitalize;
+				color: #363535;
+			}
+			span{
+				line-height: 212.4%;
+				letter-spacing: 0.02em;
+				text-transform: capitalize;
+				color: #818181;
+			}
+			.dots{
+				width: 10px;
+				height: 10px;
+				margin: 0px;
+				padding: 0px;
+				margin-right: 18px;
+			}
+		}
+	}
+}
+</style>

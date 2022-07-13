@@ -39,3 +39,26 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss">
+.services{
+	display: grid;
+	grid-template-columns: 500px 1fr;
+	gap: 142px;
+	margin-top: 100px;
+	h2{
+		margin-bottom: 34px;
+	}
+	&_blok{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr) ;
+		grid-template-rows: repeat(2, 1fr);
+		gap: 52px;
+		.card{
+			box-shadow: 0 0 20px 10px rgba(209, 209, 209, 0.333);
+			border: 1px solid #F9F9F9;
+			padding: 50px 63px;
+		}
+	}
+}
+</style>
