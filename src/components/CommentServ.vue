@@ -18,28 +18,22 @@
 				fill="#F5F5F5"
 			/>
 			</svg>
-			<div v-for="(com, index) in CommentServData" :key="index">
-			<p>
-				{{ com.comment }}
-			</p>
-			<h4>{{ com.name }}</h4>
-			<div class="sum_dots">
-				<img src="../assets/img/dotsDark.svg" alt="dots" class="dots" />
-				<img
-				src="../assets/img/dotsLight.svg"
-				alt="dots"
-				class="dots"
-				/>
-				<img
-				src="../assets/img/dotsLight.svg"
-				alt="dots"
-				class="dots"
-				/><br />
+			<Carousel :autoplay="4000" :wrap-around="true">
+				<Slide v-for="slide in CommentServData" :key="slide">
+				<div class="carousel__item">
+								<p>
+									{{ slide.comment }}
+								</p>
+								<h4>{{ slide.name }}</h4>
+								<span>{{ slide.position }}</span>
+								</div>
+				</Slide>
+				<template #addons>
+				<Pagination />
+				</template>
+			</Carousel>
 			</div>
-
-			<span>{{ com.position }}</span>
-			</div>
-		</div>
+		
 		</div>
 	</div>
 	</div>
@@ -48,27 +42,48 @@
 
 <script>
 import axios from "axios";
+import { Carousel, Pagination, Slide } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
+
 export default {
-name: "CommentServ",
-data() {
-	return {
-	CommentServData: [],
+	name: "CommentServ",
+	components: {
+		Carousel,
+		Slide,
+		Pagination,
+	},
+	data() {
+		return {
+		CommentServData: [],
+		settings: {
+		itemsToShow: 1,
+		snapAlign: 'left',
+	},
+	breakpoints: {
+		400: {
+			itemsToShow: 1,
+			snapAlign: 'left',
+			},
+		360: {
+			itemsToShow: 1,
+			snapAlign: 'left',
+			},
+		},
 	};
-},
-created() {
-	axios.get("../data/comment.json").then((resp) => {
-	this.CommentServData = resp.data;
-	});
-},
+	},
+		created() {
+			axios.get("../data/comment.json").then((resp) => {
+			this.CommentServData = resp.data;
+			});
+		},
 };
 </script>
-
 <style lang="scss">
 $base_fz: 16;
 @mixin fz($size_in_px){
 	font-size:($size_in_px/$base_fz)+rem;
 }
-.clients{
+.clients {
 	.comment{
 		display: grid;
 		grid-template-columns: 70% 30%;
@@ -87,16 +102,12 @@ $base_fz: 16;
 			right: 501px;
 			top: 100px;
 			width: 500px;
-			.sum_dots{
-				display: flex;
-
-			}
 			svg{
 				margin-top: 42px;
 				margin-left: -28px;
 			}
 			p{
-				width: 604px;
+				//width: 604px;
 				padding-bottom: 33px;
 				font-weight: 300;
 				@include fz(22);
@@ -117,14 +128,70 @@ $base_fz: 16;
 				text-transform: capitalize;
 				color: #818181;
 			}
-			.dots{
-				width: 10px;
-				height: 10px;
-				margin: 0px;
-				padding: 0px;
-				margin-right: 18px;
+		}
+	}
+}
+.carousel__pagination-button{
+	width: 10px;
+	height: 10px;
+	margin: 0px;
+	padding: 0px;
+	margin-right: 18px;
+	border-radius: 0px;
+	background: #E1E1E1;
+	&--active{
+		background: #91795C;
+	}
+}
+.carousel__item{
+	text-align: left;
+	position: relative;
+}
+.carousel__pagination {
+	position: absolute;
+	bottom: 65px;
+}
+@media screen and (max-width: 900px){
+	.clients .comment{
+		svg {
+		height: 80px;
+		width: 100px;
+		}
+	}
+	.clients img {
+		display: none;
+	}
+	.clients .comment_item{
+		left: 0;
+	}
+}
+@media screen and (max-width: 760px){
+	.clients .comment_item {
+		h5 {
+			font-size: 3,5rem;
+		}
+	}
+	.clients .comment_item {
+		display: grid;
+		padding: 0px 10px 40px 65px;
+	}
+	.clients{
+		.comment_item {
+			h5 {
+			font-size: 4rem;
 			}
 		}
+	}
+	.carousel__pagination {
+		bottom: 95px;
+	}
+}
+@media screen  and (max-width: 400px) {
+.clients .comment_item {
+	width: 269px;
+	}
+	.clients .comment_item p {
+    font-size: 14px;
 	}
 }
 </style>

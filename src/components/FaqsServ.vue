@@ -99,6 +99,7 @@ created() {
 	display: grid;
 	grid-template-columns: 1fr 850px;
 	margin-bottom: 100px;
+	margin-top: 200px;
 	&_item {
 		h2 {
 		padding-bottom: 32px;
@@ -120,10 +121,15 @@ created() {
 		}
 	}
 }
+@media screen and (max-width: 1500px){
+.faqs {
+	grid-template-columns: 1fr 2fr;
+	}
+}
 @media screen and (max-width: 1100px){
 	.faqs {
 		grid-template-columns: 1fr;
-		padding-top: 30px;
+		padding-top: 130px;
 			&_item{
 			padding-bottom: 30px;
 				h2{
@@ -135,6 +141,7 @@ created() {
 		}
 	}
 }
+
 @media screen and (max-width: 760px){
 .faqs {
 	padding-top: 0;

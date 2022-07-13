@@ -15,14 +15,8 @@ $base_fz: 16;
                 }
             }
         }
-        .faqs {
-            grid-template-columns: 1fr 2fr;
-        }
-        .services {
-            display: grid;
-            grid-template-columns: 470px 1fr;
-            gap: 0;
-        }
+        
+       
         .latest .blog_post_content {
             position: relative;
             width: 275px;
@@ -43,9 +37,7 @@ $base_fz: 16;
         .latest .btn {
             margin-top: 62px;
         }
-        .clients .counter_item h5 {
-            font-size: 6rem;
-        }
+       
     }
     @media screen and (max-width: 1100px){
         h2{
@@ -86,10 +78,7 @@ $base_fz: 16;
         .gallery{
             margin-top: 70px;
         }
-        .services {
-            grid-template-columns:1fr;
-            gap: 40px;
-        }
+      
         .aboutMe {
             display: grid;
             grid-template-columns: 1fr;
@@ -128,12 +117,7 @@ $base_fz: 16;
                 margin-top: 10px;
             }
         }
-        .clients .comment{
-                svg {
-                    height: 80px;
-                    width: 100px;
-                }
-        }
+       
         .latest{
             .blog_post_content h4 {
                 @include fz(20);
@@ -146,18 +130,9 @@ $base_fz: 16;
         .contactMe img {
             display: none;
         }
-        .clients img {
-            display: none;
-        }
-        .clients .comment_item {
-            padding: 128px 10px 40px 82px;
-            right: 0;
-            top: 0;
-        }
-        .clients .counter_item {
-            align-items: center;
-            flex-direction: column;
-        }
+        
+
+      
         .latest .blog_post_content {
             height: 450px;
         }
@@ -172,9 +147,7 @@ $base_fz: 16;
                 margin-bottom: 120px;
             }
         }
-        .services {
-            margin-top: 94px;
-        }
+        
        
         .fot_top .subscribe {
             p {
@@ -184,29 +157,8 @@ $base_fz: 16;
                 width: 198px;
             }
         }
-        .clients .comment_item {
-            width: 300px;
-            p {
-                width: 300px;
-            }
-            h5 {
-                font-size: 3,5rem;
-            }
-        }
-        .clients{
-            .counter {
-                margin-bottom: 60px;
-            }
-            .comment_item {
-                h5 {
-                    font-size: 4rem;
-                }
-            }    
-        }
-        .clients .counter {
-            display: grid;
-            grid-template-columns: 1fr;
-        }
+        
+       
         .contactMe {
             grid-template-columns: 1fr;
             margin-left: 47px;
@@ -260,10 +212,7 @@ $base_fz: 16;
                 padding-bottom: 30px;
             }   
         }
-            .services_blok {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(4,1fr);
-            }
+            
             .gallery {
                 grid-template-columns: repeat(2,1fr);
             }
@@ -352,17 +301,11 @@ $base_fz: 16;
         #side_block {
             width: 290px;
         }
-        .clients .comment_item {
-            padding: 81px 10px 0px 26px;
-        }
         .contactMe_item p {
             width: 251px;
         }
         .contactMe {
             margin-left: 13px;
-        }
-        .clients .comment_item, .clients .comment_item p {
-            width: 243px;
         }
         #portfolio ul {
             width: 291px;
@@ -392,10 +335,6 @@ $base_fz: 16;
     @media screen and (max-width: 320px){
         .latest .blog_post_content {
             left: 6px;
-        }
-        .services_blok .card {
-            width: 220px;
-            padding: 19px 30px;
         }
         .fot_top {
             .logo_soc {

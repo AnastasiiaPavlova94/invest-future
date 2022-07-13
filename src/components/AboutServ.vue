@@ -40,7 +40,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
 .services{
 	display: grid;
 	grid-template-columns: 500px 1fr;
@@ -59,6 +60,34 @@ export default {
 			border: 1px solid #F9F9F9;
 			padding: 50px 63px;
 		}
+	}
+}
+@media screen and (max-width: 1500px){
+.services {
+		display: grid;
+		grid-template-columns: 470px 1fr;
+		gap: 0;
+	}
+}
+@media screen and (max-width: 1100px){
+.services {
+	grid-template-columns:1fr;
+	gap: 40px;
+}
+}
+@media screen and (max-width: 760px){
+	.services{
+		margin-top: 94px;
+		&_blok {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(4,1fr);
+		}
+	}
+}
+@media screen and (max-width: 320px){
+	.services_blok .card {
+		width: 220px;
+		padding: 19px 30px;
 	}
 }
 </style>

@@ -52,7 +52,8 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
+
 $base_fz: 16;
 $font_Prata: 'Prata';
 $color_blue: #5474FD;
@@ -89,7 +90,26 @@ $color_blue: #5474FD;
 		}
 	}
 }
-
+@media screen and (max-width: 1500px){
+.clients .counter_item h5 {
+	font-size: 6rem;
+	}
+}
+@media screen and (max-width: 900px){
+.clients .counter_item {
+	align-items: center;
+	flex-direction: column;
+	}
+}
+@media screen and (max-width: 760px){
+.clients{
+	.counter {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin-bottom: 60px;
+		}
+	}
+}
 </style>
 
 
