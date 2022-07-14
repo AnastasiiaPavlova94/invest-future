@@ -1,11 +1,11 @@
 <template>
-	<section>
+	<section id="counter-section">
 		<div class="container">
 			<div class="clients">
 					<div class="counter">
 						<div class="counter_item" v-for="(cnt, index) in CountertServData" :key="index"  > 
 							<h5>
-								<vue3-autocounter ref='counter' :startAmount='0' :endAmount='cnt.counter' :duration='3' separator=',' decimalSeparator='.' :decimals='0' :autoinit='autoinit'/>
+								<vue3-autocounter :ref='`counter${index+1}`' :startAmount='0' :endAmount='cnt.counter' :duration='3' separator=',' decimalSeparator='.' :decimals='0' :autoinit='false'/>
 							</h5>
 						<span>{{ cnt.type }}</span>
 						</div>
@@ -26,14 +26,11 @@ export default {
 	data() {
 		return {
 		CountertServData: [],
-		autoinit: true,
-		ifFixsed: false,
 		};
 	},
-	watch() {
-		if(window.scrollY > 100){
-			//	this.autoinit = true
-				this.start()	
+	computed:{
+		numberOfset(){
+			return document.getElementById('counter-section').offsetTop - window.outerHeight + 50
 		}
 	},
 	created() {
@@ -42,10 +39,19 @@ export default {
 			this.CountertServData = resp.data;
 
 		});
+		window.addEventListener('scroll', this.checkStartCounter)
 	},
 	methods: {
+		checkStartCounter(){
+				if(window.scrollY > this.numberOfset){
+					this.start()
+					window.removeEventListener('scroll', this.checkStartCounter)
+				}
+		},
 		start() {
-			this.$refs.counter.start();
+			for(let c in this.$refs){
+				this.$refs[c][0].start();
+			}
 		}
 	},
 };
@@ -75,14 +81,14 @@ $color_blue: #5474FD;
 				font-family: $font_Prata;
 				@include fz(120);
 				line-height: 129.4%;
-				letter-spacing: -0.02em;
 				text-transform: capitalize;
 				color: #DEDEDE;
 				padding-right: 8px;
+				display: inline-block;
+				flex-basis: 25%;
 			}
 			span{
 				line-height: 212.4%;
-				letter-spacing: 0.02em;
 				text-transform: uppercase;
 				color: #5B5B5B;
 				padding-bottom: 25px;

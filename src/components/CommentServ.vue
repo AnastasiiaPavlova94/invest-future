@@ -18,7 +18,7 @@
 				fill="#F5F5F5"
 			/>
 			</svg>
-			<Carousel :autoplay="4000" :wrap-around="true">
+			<Carousel :autoplay="4000" >
 				<Slide v-for="slide in CommentServData" :key="slide">
 				<div class="carousel__item">
 								<p>
@@ -78,6 +78,7 @@ export default {
 		},
 };
 </script>
+
 <style lang="scss">
 $base_fz: 16;
 @mixin fz($size_in_px){
@@ -112,7 +113,6 @@ $base_fz: 16;
 				font-weight: 300;
 				@include fz(22);
 				line-height: 222.4%;
-				letter-spacing: 0.02em;
 				color: #5B5B5B;
 			}
 			h4{
@@ -124,25 +124,26 @@ $base_fz: 16;
 			}
 			span{
 				line-height: 212.4%;
-				letter-spacing: 0.02em;
 				text-transform: capitalize;
 				color: #818181;
 			}
+			.carousel__pagination-button{
+				width: 10px;
+				height: 10px;
+				margin: 0px;
+				padding: 0px;
+				margin-right: 18px;
+				border-radius: 0px;
+				background: #E1E1E1;
+					&--active{
+						background: #91795C;
+					}
+				}
 		}
 	}
+	
 }
-.carousel__pagination-button{
-	width: 10px;
-	height: 10px;
-	margin: 0px;
-	padding: 0px;
-	margin-right: 18px;
-	border-radius: 0px;
-	background: #E1E1E1;
-	&--active{
-		background: #91795C;
-	}
-}
+
 .carousel__item{
 	text-align: left;
 	position: relative;

@@ -221,7 +221,6 @@ footer {
 		display: flex;
 		justify-content: space-between;
 		line-height: 212.4%;
-		letter-spacing: 0.02em;
 		color: #818181;
 		padding-top: 133px;
 		padding-bottom: 55px;
@@ -272,7 +271,6 @@ footer {
 		a {
 			padding-bottom: 20px;
 			line-height: 226.9%;
-			letter-spacing: 0.02em;
 			text-transform: capitalize;
 			color: #818181;
 			&:hover {

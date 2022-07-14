@@ -1,10 +1,39 @@
 [
     {
-        "tab": "tab1",
+        "tab": "Buildings",
+        "revers": "revers",
+        "img1": "imgGallery5.jpg",
+        "img2": "imgGallery4.jpg",
+        "img3": "imgGallery5.jpg",
+        "img4": "imgGallery4.jpg",
+        "img5": "imgGallery5.jpg"
+    },
+    {
+        "tab": "Hotels",
+        "revers": "",
+        "img1": "imgGallery3.jpg",
+        "img2": "imgGallery2.jpg",
+        "img3": "imgGallery3.jpg",
+        "img4": "imgGallery3.jpg",
+        "img5": "imgGallery5.jpg"
+    },
+    {
+        "tab": "Interior",
+        "revers": "revers",
+        "img1": "imgGallery2.jpg",
+        "img2": "imgGallery2.jpg",
+        "img3": "imgGallery1.jpg",
+        "img4": "imgGallery1.jpg",
+        "img5": "imgGallery5.jpg"
+    },
+    {
+        "tab": "Living rooms",
+        "revers": "",
         "img1": "imgGallery1.jpg",
         "img2": "imgGallery2.jpg",
         "img3": "imgGallery3.jpg",
         "img4": "imgGallery4.jpg",
         "img5": "imgGallery5.jpg"
     }
+    
 ]
