@@ -73,7 +73,7 @@ export default {
 .services {
 	grid-template-columns:1fr;
 	gap: 40px;
-}
+	}
 }
 @media screen and (max-width: 760px){
 	.services{

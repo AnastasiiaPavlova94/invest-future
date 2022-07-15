@@ -214,3 +214,87 @@ export default {
 	}
 }
 </script>
+
+<style lang="scss">
+@media screen and (max-width: 1100px) {
+	.contactMe img {
+		right: -30px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.contactMe img {
+		display: none;
+	}
+}
+@media screen and (max-width: 760px) {
+	.contactMe {
+		grid-template-columns: 1fr;
+		margin-left: 47px;
+		width: 500px;
+		&_item {
+			padding: 0px;
+			&_form {
+				width: 450px;
+				column-gap: 12px;
+			}
+		}
+	}
+	.contactMe_item_form input,
+	.contactMe_item_form textarea {
+		width: 211px;
+	}
+	.contactMe_item_form .mess {
+		width: 455px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.contactMe {
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 550px) {
+	.contactMe_item_form {
+		display: flex;
+		flex-direction: column;
+	}
+	.contactMe_item_form .mess,
+	.contactMe_item_form input,
+	.contactMe_item_form textarea {
+		width: 300px;
+	}
+	.contactMe {
+		margin-left: 47px;
+		margin-bottom: 188px;
+		margin-top: 100px;
+	}
+	.contactMe {
+		width: 300px;
+		&_item {
+			p {
+				margin-bottom: 20px;
+				width: 320px;
+			}
+			&_form {
+				width: 320px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 400px) {
+	.contactMe_item p {
+		width: 251px;
+	}
+	.contactMe {
+		margin-left: 13px;
+	}
+	.contactMe_item_form .mess,
+	.contactMe_item_form input,
+	.contactMe_item_form textarea {
+		width: 203px;
+		height: 30px;
+	}
+	.contactMe_item_form {
+		width: 204px;
+	}
+}
+</style>

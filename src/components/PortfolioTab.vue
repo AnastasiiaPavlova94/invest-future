@@ -6,20 +6,20 @@
 						:onInit="onInit"
 						:onBeforeSlide="onBeforeSlide"
 						>
-						<a :href="require('@/assets/img/imgGallery1.jpg')">
-							<img src="@/assets/img/imgGallery1.jpg" alt="postAbout">
+						<a :href="require('@/assets/img/portfolio11.jpeg')">
+							<img src="@/assets/img/portfolio11.jpeg" alt="postAbout">
 						</a>
-						<a :href="require('@/assets/img/imgGallery2.jpg')">
-							<img src="@/assets/img/imgGallery2.jpg" alt="postAbout">
+						<a :href="require('@/assets/img/portfolio12.jpeg')">
+							<img src="@/assets/img/portfolio12.jpeg" alt="postAbout">
 						</a>
-						<a :href="require('@/assets/img/imgGallery3.jpg')">
-							<img src="@/assets/img/imgGallery3.jpg" alt="postAbout">
+						<a :href="require('@/assets/img/portfolio13.jpeg')">
+							<img src="@/assets/img/portfolio13.jpeg" alt="postAbout">
 						</a>
-						<a :href="require('@/assets/img/imgGallery4.jpg')">
-							<img src="@/assets/img/imgGallery4.jpg" alt="postAbout">
+						<a :href="require('@/assets/img/portfolio14.jpeg')">
+							<img src="@/assets/img/portfolio14.jpeg" alt="postAbout">
 						</a>
-						<a :href="require('@/assets/img/imgGallery5.jpg')">
-							<img src="@/assets/img/imgGallery5.jpg" alt="postAbout">
+						<a :href="require('@/assets/img/portfolio15.jpeg')">
+							<img src="@/assets/img/portfolio15.jpeg" alt="postAbout">
 						</a>
 			</lightgallery>
 		</tab>
@@ -92,22 +92,15 @@ export default {
 	@import 'lightgallery/css/lightgallery.css';
 	@import 'lightgallery/css/lg-thumbnail.css';
 	@import 'lightgallery/css/lg-zoom.css';
-#portfolio{
-	margin-bottom: 144px;
-	margin-top: 100px;
-	position: relative;
-	h2{
-		margin-bottom: 34px;
-	}
-}
+
 .tabs-component-tabs{
 	width: 550px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	position: absolute;
-	top: 250px;
-	right: 300px;
+	top: 270px;
+	right: 120px;
 	.tabs-component-tab-a{
 		font-weight: 500;
 		line-height: 212.4%;
@@ -138,6 +131,41 @@ export default {
 		&:first-child{
 			grid-area: 1/ 5 / 3 / 3;
 		}
+	}
+}
+@media screen and (max-width: 1450px){
+.tabs-component-tabs{
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0px auto;
+	}
+.lightgallery-vue{
+	margin-top: 40px;
+}
+}
+@media screen and (max-width: 1000px){
+.lightgallery-vue {
+	grid-gap: 17px;
+	}
+}
+@media screen and (max-width: 650px){
+.lightgallery-vue{
+	grid-template-columns: repeat(2, 1fr) ;
+	grid-template-rows: repeat(4, 1fr);
+	grid-gap: 10px;
+	}
+	.revers{
+		a{
+			&:first-child{
+				grid-area: 1/ 2 / 1 / 1;
+			}
+		}
+	}
+}
+@media screen and (max-width: 550px){
+	.tabs-component-tabs {
+		width: 268px;
 	}
 }
 </style>

@@ -2,38 +2,38 @@
     {
         "tab": "Buildings",
         "revers": "revers",
-        "img1": "imgGallery5.jpg",
-        "img2": "imgGallery4.jpg",
-        "img3": "imgGallery5.jpg",
-        "img4": "imgGallery4.jpg",
-        "img5": "imgGallery5.jpg"
+        "img1": "portfolio21.jpeg",
+        "img2": "portfolio22.jpeg",
+        "img3": "portfolio23.jpeg",
+        "img4": "portfolio24.jpeg",
+        "img5": "portfolio25.jpeg"
     },
     {
         "tab": "Hotels",
         "revers": "",
-        "img1": "imgGallery3.jpg",
-        "img2": "imgGallery2.jpg",
-        "img3": "imgGallery3.jpg",
-        "img4": "imgGallery3.jpg",
-        "img5": "imgGallery5.jpg"
+        "img1": "portfolio31.jpeg",
+        "img2": "portfolio32.jpeg",
+        "img3": "portfolio33.jpeg",
+        "img4": "portfolio34.jpeg",
+        "img5": "portfolio35.jpeg"
     },
     {
         "tab": "Interior",
         "revers": "revers",
-        "img1": "imgGallery2.jpg",
-        "img2": "imgGallery2.jpg",
-        "img3": "imgGallery1.jpg",
-        "img4": "imgGallery1.jpg",
-        "img5": "imgGallery5.jpg"
+        "img1": "portfolio41.webp",
+        "img2": "portfolio42.jpeg",
+        "img3": "portfolio43.jpeg",
+        "img4": "portfolio44.jpeg",
+        "img5": "portfolio45.jpeg"
     },
     {
         "tab": "Living rooms",
         "revers": "",
-        "img1": "imgGallery1.jpg",
-        "img2": "imgGallery2.jpg",
-        "img3": "imgGallery3.jpg",
-        "img4": "imgGallery4.jpg",
-        "img5": "imgGallery5.jpg"
+        "img1": "portfolio51.jpeg",
+        "img2": "portfolio52.jpeg",
+        "img3": "portfolio53.jpeg",
+        "img4": "portfolio54.jpeg",
+        "img5": "portfolio55.jpeg"
     }
     
 ]

@@ -75,5 +75,10 @@ $base_fz: 16;
 	right: 0px;
 	z-index: 0;
 }
+@media screen and (max-width: 320px) {
+    .invest {
+        margin-left: 0;
+    }
+}
 </style>
 
