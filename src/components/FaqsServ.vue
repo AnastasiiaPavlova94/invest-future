@@ -129,7 +129,7 @@ created() {
 @media screen and (max-width: 1100px){
 	.faqs {
 		grid-template-columns: 1fr;
-		padding-top: 130px;
+		// padding-top: 130px;
 			&_item{
 			padding-bottom: 30px;
 				h2{

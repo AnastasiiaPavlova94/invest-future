@@ -14,12 +14,12 @@ $base_fz: 16;
     //     max-width: 1063px;
     //     grid-gap: 18px;
     // }
-    .latest .blog_post_content {
+    .blog_section .blog_post_content {
         width: 70%;
         left: 18px;
         height: 350px;
     }
-    .latest .btn {
+    .blog_section .btn {
         margin-top: 62px;
     }
 }
@@ -43,16 +43,16 @@ $base_fz: 16;
     // .gallery {
     //     margin-top: 70px;
     // }
-    .latest p {
+    .blog_section p {
         width: 100%;
         padding-bottom: 80px;
     }
-    .latest .blog_post_content {
+    .blog_section .blog_post_content {
         left: 7px;
     }
 }
 @media screen and (max-width: 900px) {
-    .latest {
+    .blog_section {
         .blog_post_content h4 {
             @include fz(20);
         }
@@ -61,7 +61,7 @@ $base_fz: 16;
             left: 0;
         }
     }
-    .latest .blog_post_content {
+    .latblog_sectionest .blog_post_content {
         height: 450px;
     }
 }
@@ -69,7 +69,7 @@ $base_fz: 16;
     .back_img {
         background: url(../img/Rectangle_sect1.png) right top/100% no-repeat;
     }
-    .latest .blog {
+    .blog_section .blog {
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: 1fr;
@@ -88,7 +88,7 @@ $base_fz: 16;
     }
 }
 @media screen and (max-width: 600px) {
-    .latest .blog_post_content {
+    .blog_section .blog_post_content {
         width: 70%;
         left: 23px;
     }
@@ -100,7 +100,7 @@ $base_fz: 16;
     h3 {
         @include fz(18);
     }
-    .latest .btn {
+    .blog_section .btn {
         margin-top: 0;
     }
 }
@@ -111,13 +111,13 @@ $base_fz: 16;
     .blog_post_content {
         left: 9px;
     }
-    .latest .blog_post_content {
+    .blog_section .blog_post_content {
         left: 9px;
     }
     
 }
 @media screen and (max-width: 320px) {
-    .latest .blog_post_content {
+    .blog_section .blog_post_content {
         left: 6px;
     }
 }

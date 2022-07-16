@@ -1,8 +1,8 @@
 <template>
 <section>
 	<div class="container">
-	<div class="latest">
-		<h2>latest blog posts</h2>
+	<div class="blog_section">
+		<h2>blog posts</h2>
 		<p>
 		Id at urna non viverra eu volutpat porttitor elementum. Viverra
 		senectus dui ultricies dolor.
@@ -26,3 +26,18 @@ export default {
 }
 </script>
 
+<style lang="scss">
+
+.blog_section{
+    display: flex;
+    flex-direction:column;
+    padding: 100px 0 100px 0;
+    .btn {
+		margin-top: 76px;
+        align-self: center;
+    }
+	p{
+		margin-bottom: 30px;
+	}
+}
+</style>

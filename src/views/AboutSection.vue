@@ -74,6 +74,11 @@ export default {
 		}
 	
 }
+@media screen and (max-width: 1300px){
+.bt{
+		margin-top: 20px;
+	}
+}
 @media screen and (max-width: 1100px){
 .aboutMe {
 						display: grid;
@@ -90,6 +95,7 @@ export default {
 		width: 50%;
 		}
 	}
+	
 }
 @media screen and (max-width: 900px){
 	.block{
@@ -103,18 +109,23 @@ export default {
 		margin-top: 50px;
 	}
 }
-@media screen and (max-width: 700px){
-	block{
-		display: flex;
+@media screen and (max-width: 760px){
+.aboutMe {
+	margin-top: 80px;
+	.btn{
+			margin-bottom: 120px;
 	}
 }
-@media screen and (max-width: 760px){
-	.aboutMe {
-						margin-top: 80px;
-						.btn{
-								margin-bottom: 120px;
-						}
-				}
  }
+	// @media screen and (max-width: 700px){
+	// 	.btn{
+	// 		display: flex;
+	// 	}
+	// }
+@media screen and (max-width: 600px){
+	h2 {
+		font-size: 2.5rem;
+	}
+}
 </style>
 

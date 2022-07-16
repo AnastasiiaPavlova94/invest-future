@@ -1,5 +1,5 @@
 <template>
-<section>
+<section id="comment_block">
 	<div class="container">
 	<div class="clients">
 		<div class="comment">
@@ -26,7 +26,7 @@
 								</p>
 								<h4>{{ slide.name }}</h4>
 								<span>{{ slide.position }}</span>
-								</div>
+				</div>
 				</Slide>
 				<template #addons>
 				<Pagination />
@@ -58,18 +58,18 @@ export default {
 		settings: {
 		itemsToShow: 1,
 		snapAlign: 'left',
-	},
-	breakpoints: {
-		400: {
-			itemsToShow: 1,
-			snapAlign: 'left',
-			},
-		360: {
-			itemsToShow: 1,
-			snapAlign: 'left',
-			},
-		},
-	};
+			}
+	// breakpoints: {
+	// 	400: {
+	// 		itemsToShow: 1,
+	// 		snapAlign: 'left',
+	// 		},
+	// 	360: {
+	// 		itemsToShow: 1,
+	// 		snapAlign: 'left',
+	// 		},
+	// 	},
+		}
 	},
 		created() {
 			axios.get("../data/comment.json").then((resp) => {
@@ -127,7 +127,13 @@ $base_fz: 16;
 				text-transform: capitalize;
 				color: #818181;
 			}
-			.carousel__pagination-button{
+			
+		}
+	}
+	
+}
+#comment_block{
+	.carousel__pagination-button{
 				width: 10px;
 				height: 10px;
 				margin: 0px;
@@ -135,47 +141,62 @@ $base_fz: 16;
 				margin-right: 18px;
 				border-radius: 0px;
 				background: #E1E1E1;
+				&::before{
+					display: none;
+				}
 					&--active{
 						background: #91795C;
 					}
 				}
-		}
+	.carousel__item{
+		text-align: left;
+		position: relative;
 	}
-	
+	.carousel__pagination {
+		position: absolute;
+		bottom: 65px;
+	}
 }
 
-.carousel__item{
-	text-align: left;
-	position: relative;
-}
-.carousel__pagination {
-	position: absolute;
-	bottom: 65px;
-}
 @media screen and (max-width: 900px){
 	.clients .comment{
 		svg {
-		height: 80px;
-		width: 100px;
-		}
+			height: 80px;
+			width: 100px;
+			}
 	}
 	.clients img {
 		display: none;
+	}
+	.clients .comment {
+		grid-template-columns: 1fr;
+		
+	}
+	.clients .comment_item {
+    padding: 40px;
 	}
 	.clients .comment_item{
 		left: 0;
 	}
 }
-@media screen and (max-width: 760px){
+@media screen and (max-width: 780px){	
+	#comment_block .carousel__pagination {
+		bottom: 91px;
+	}
+}
+@media screen and (max-width: 580px){
+	.clients .comment_item {
+		width: 330px;
+	}
 	.clients .comment_item {
 		h5 {
 			font-size: 3,5rem;
 		}
 	}
-	.clients .comment_item {
-		display: grid;
-		padding: 0px 10px 40px 65px;
-	}
+// 	.clients .comment_item {
+// 		display: grid;
+// 		padding: 0px 10px 40px 65px;
+// 	}
 	.clients{
 		.comment_item {
 			h5 {
@@ -183,16 +204,16 @@ $base_fz: 16;
 			}
 		}
 	}
-	.carousel__pagination {
-		bottom: 95px;
-	}
+// 	.carousel__pagination {
+// 		bottom: 95px;
+// 	}
 }
 @media screen  and (max-width: 400px) {
-.clients .comment_item {
-	width: 269px;
-	}
 	.clients .comment_item p {
-    font-size: 14px;
+		font-size: 14px;
+	}
+	.clients .comment_item {
+		padding: 4px;
 	}
 }
 </style>

@@ -67,12 +67,11 @@ $color_blue: #5474FD;
 	font-size:($size_in_px/$base_fz)+rem;
 }
 .clients{
-	margin-bottom: 250px;
-	margin-top: 240px;
+	padding-bottom: 250px;
+	padding-top: 250px;
 	.counter{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		margin-bottom: 220px;
 		&_item{
 			display: flex;
 			justify-content: center;
@@ -108,14 +107,17 @@ $color_blue: #5474FD;
 	}
 }
 @media screen and (max-width: 760px){
-.clients{
-	.counter {
-		display: grid;
-		grid-template-columns: 1fr;
-		margin-bottom: 60px;
+	.clients{
+		padding-bottom: 50px;
+		padding-top: 50px;
+		.counter {
+			display: grid;
+			grid-template-columns: 1fr;
+			margin-bottom: 60px;
+			}
 		}
-	}
 }
+
 </style>
 
 

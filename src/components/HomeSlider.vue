@@ -1,5 +1,6 @@
 <template>
-	<div class="slider home">
+<div id="invest">
+	<div class="slider">
 	<carousel :items-to-show="1" :wrap-around="true">
 		<slide v-for="slide in HomeSliderData" :key="slide">
 				<h1>Invest in your Future, Invest with us</h1>
@@ -20,6 +21,7 @@
 		</template>
   </carousel>
 	</div>
+</div>
 </template>
 
 <script>
@@ -65,15 +67,59 @@ export default {
 
 
 <style lang="scss" >
+
 $font_Rubik: 'Rubik';
+$font_Prata: 'Prata';
+$base_fz: 16;
+@mixin fz($size_in_px) {
+	font-size: ($size_in_px/$base_fz) + rem;
+}
+
+
+#invest{
+margin-left: 65px;
+height: 100vh;
+.slider{
+		position: relative;
+		z-index: 11;
+		h1{
+		font-family: $font_Prata;
+		@include fz(90);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+		padding: 228px 0 72px 40px;
+		text-transform: capitalize;
+		width: 670px;
+		color: #201F1F;
+		}
+		p{
+		@include fz(19);
+		line-height: 225.9%;
+		letter-spacing: 0.02em;
+		color: #888888;
+		padding: 45px 40px;
+		}
+		&_item{
+				
+				display: grid;
+				gap: 131px;
+				grid-template-columns: 3fr 1fr;
+				background: rgba(255, 255, 255, 1);
+				align-items: center;
+				
+		}
+}
+	
+}
 .carousel__slide {
 	flex-direction: column;
 	text-align: left;
+	position: relative;
 }
 .carousel__slide {
 	align-items: flex-start;
 }
-
 .carousel__prev::before,
 .carousel__next::before{
 	content: '';
@@ -93,12 +139,12 @@ $font_Rubik: 'Rubik';
 }
 .carousel__next {
 	top: 90%;
-	left: -233px;
+	left: -145px;
 	transform: translate(50%, -50%);
 }
 .carousel__prev {
 	top: 82%;
-	left: -175px;
+	left: -86px;
 	transform: translate(-50%, -50%);
 }
 .carousel__prev,
@@ -118,24 +164,12 @@ $font_Rubik: 'Rubik';
 		}
 		}
 }
-// .carousel__next--in-active,
-// .carousel__prev--in-active{
-// 		border: 2px solid #515050;
-// 		&:hover{
-// 			border: 2px solid #515050;
-// 		}
-// 		&::before{
-// 				border-bottom: 2px solid #515050;
-// 				border-left: 2px solid #515050;
-// 		}
-// }
-
 .carousel__pagination {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
 	top: 45%;
-	left: -190px;
+	left: -106px;
 }
 .carousel__pagination{
 	counter-reset: mycount;
@@ -158,71 +192,91 @@ $font_Rubik: 'Rubik';
 	}
 }
 .carousel__pagination-button {
-	background-color: #cfcfcf00;
+	background-color: transparent;
 }
-.carousel__pagination-button--active{
-	.carousel__pagination li button::before {
+.carousel__pagination li button.carousel__pagination-button--active{
+	&::before {
 		color: #91795C;
 	}
 }
-.carousel__pagination-button--active{
-	&::before {
-		color: red;
-	}
-}
-@media screen and (max-width: 1750px) {
-	.carousel__pagination {
-		left: -59px;
-	}
-	.carousel__prev {
-		left: -40px;
-	}
-	.carousel__next {
-		left: -102px;
+@media screen and (max-width: 1150px) {
+	#invest .carousel  .slider_item {
+		gap: 35px;
 	}
 }
 @media screen and (max-width: 1100px) {
-	.carousel__track {
-		h1 {
-			font-size: 3.625rem;
-			padding: 180px 0 72px 40px;
-			width: 452px;
-		}
-			p {
-			padding: 17px 17px;
-		}
-	}
-	.carousel__next{
-		.slider_item {
-			width: 100vh;
-			gap: 10px;
-		}
-	}
-	
-}
-@media screen and (max-width: 950px) {
-	.carousel__track {
-		h1 {
-		font-size: 3.625rem;
-		padding: 198px 0 42px 40px;
-		width: 388px;
-		}
-		p{
-			font-size: 1.5rem;
+#invest{
+	.slider{
+		h1{
+		font-family: $font_Prata;
+		@include fz(60);
 		}
 	}
 }
-@media screen and (max-width: 760px) {
-	.carousel__track h1 {
-		font-size: 3.625rem;
-		padding: 180px 0 32px 15px;
+#invest .slider p {
+font-size: 1rem;
+}
+	.carousel__prev {
+	top: 79%;
+	left: -55px;
+	}
+	.carousel__next {
+	top: 90%;
+	left: -114px;
+	}
+	.carousel__pagination {
+	top: 45%;
+	left: -72px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+#invest{
+	.slider{
+		h1{
+		font-family: $font_Prata;
+		@include fz(40);
+		width: auto;
+		}
+	}
+}
+		#invest .carousel .slider_item {
+			display: grid;
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+}
+@media screen and (max-width: 600px) {
+	#invest .slider h1 {
+		font-size: 2rem;
+		padding: 228px 0 17px 0px;
+	}
+	#invest .slider p {
+    font-size: 1rem;
+    padding: 45px 0px;
+	}
+	#invest {
+		height: auto;
+	}
+	.carousel__prev {
+	top: 69%;
+	}
+	.carousel__next {
+	top: 80%;
+	}
+	.carousel__pagination {
+	top: 35%;
 	}
 }
 @media screen and (max-width: 600px) {
-	.carousel__track h1 {
-		padding: 180px 0 72px 40px;
-		font-size: 2rem;
-		width: 205px;
+	.carousel__prev {
+	top: 59%;
+	}
+	.carousel__next {
+	top: 70%;
+	}
+	.carousel__pagination {
+	top: 25%;
 	}
 }
 </style>

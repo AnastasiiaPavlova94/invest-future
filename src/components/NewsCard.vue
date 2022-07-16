@@ -15,35 +15,6 @@
 		</p>
 	</div>
 	</div>
-
-	<!-- <div class="blog_post">
-	<div>
-		<img src="../assets/img/post2.jpg" alt="post3" />
-	</div>
-	<div class="blog_post_content">
-		<h5>Mar 29, 2022</h5>
-		<h4>How to make minimalist living rooms pop-out</h4>
-		<p>
-		Consequat, volutpat morbi tempor elit tellus, ante in mattis. Facilisi
-		morbi ipsum dui aliquet...
-		<span>Read More</span>
-		</p>
-	</div>
-	</div>
-	<div class="blog_post">
-	<div>
-		<img src="../assets/img/post3.jpg" alt="post3" />
-	</div>
-	<div class="blog_post_content">
-		<h5>Mar 27, 2022</h5>
-		<h4>how to make your resort that looks outstanding</h4>
-		<p>
-		Consequat, volutpat morbi tempor elit tellus, ante in mattis. Facilisi
-		morbi ipsum dui aliquet...
-		<span>Read More</span>
-		</p>
-	</div>
-	</div> -->
 </div>
 </template>
 
@@ -53,7 +24,6 @@ export default {
 name: "NewsCard",
 data() {
 	return {
-	// API_KEY: "4364238301bb4d329a06c6ae22a91354",
 	NewsData: [],
 	page: 1,
 	};
@@ -81,7 +51,7 @@ methods: {
 	url += '&from=' + this.newDataFormated
 	url += '&to=' + this.newDataFormated
 	url += '&language=en'
-	url += '&pageSize=20'
+	url += '&pageSize=3'
 	url += '&page=' + this.page
 	
 	axios
@@ -93,3 +63,64 @@ methods: {
 }
 }
 </script>
+
+
+<style lang="scss">
+$base_fz: 16;
+@mixin fz($size_in_px){
+    font-size:($size_in_px/$base_fz)+rem;
+}
+
+.blog{
+    display: grid;
+    grid-template-rows: 640px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+    &_post{
+		img {
+			height: 315px
+		}
+        &_content{
+            position: relative;
+			height: 400px;
+            top: -50px;
+            left: 1px;
+            padding: 30px 35px;
+            background-color: #fff;
+            box-shadow: 0px 20px 44px 0px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(249, 249, 249, 1);
+			margin: 0px 30px 0 30px ;
+            h5{
+            @include fz(14);
+            line-height: 212.4%;
+            color: #BABABA;
+            margin-bottom: 10px;
+            }
+            h4{
+                font-weight: 500;
+                @include fz(22);
+                line-height: 147.9%;
+                text-transform: capitalize;
+                color: #363535;
+                margin-bottom: 14px;
+            }
+            p{
+                line-height: 200.9%;
+                color: #818181;
+                //width: 100%;
+                //padding-bottom: 0px;
+            }
+            span {
+                font-style: italic;
+                font-weight: 400;
+                @include fz(14);
+                line-height: 200.9%;
+                text-decoration-line: underline;
+                color: #91795C;
+            }
+			
+        }
+    }
+}
+</style>

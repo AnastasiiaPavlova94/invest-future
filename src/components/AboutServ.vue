@@ -44,7 +44,7 @@ export default {
 
 .services{
 	display: grid;
-	grid-template-columns: 500px 1fr;
+	grid-template-columns: 530px 1fr;
 	gap: 142px;
 	margin-top: 100px;
 	h2{
@@ -66,7 +66,10 @@ export default {
 .services {
 		display: grid;
 		grid-template-columns: 470px 1fr;
-		gap: 0;
+		gap: 10px;
+		h2{
+			font-size: 2rem;
+		}
 	}
 }
 @media screen and (max-width: 1100px){
@@ -88,6 +91,9 @@ export default {
 	.services_blok .card {
 		width: 220px;
 		padding: 19px 30px;
+	}
+	.services h2{
+	font-size: 2.5rem;
 	}
 }
 </style>
