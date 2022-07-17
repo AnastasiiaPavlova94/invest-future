@@ -151,10 +151,14 @@ $base_fz: 16;
 	.carousel__item{
 		text-align: left;
 		position: relative;
+		
 	}
 	.carousel__pagination {
+		display: flex;
+		flex-direction: row;
 		position: absolute;
-		bottom: 65px;
+		top: 63%;
+		left: -3px;
 	}
 }
 
@@ -181,7 +185,7 @@ $base_fz: 16;
 }
 @media screen and (max-width: 780px){	
 	#comment_block .carousel__pagination {
-		bottom: 91px;
+	top: 70%;
 	}
 }
 @media screen and (max-width: 580px){
@@ -192,6 +196,9 @@ $base_fz: 16;
 		h5 {
 			font-size: 3,5rem;
 		}
+	}
+	#comment_block .carousel__pagination {
+	top: 76%;
 	}
 // 	.clients .comment_item {
 // 		display: grid;
@@ -214,6 +221,9 @@ $base_fz: 16;
 	}
 	.clients .comment_item {
 		padding: 4px;
+	}
+	#comment_block .carousel__pagination {
+		top: 61%;
 	}
 }
 </style>

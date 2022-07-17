@@ -35,7 +35,7 @@ computed: {
 	newDataFormated() {
 	const d = new Date()
 	let month = d.getMonth() + 1
-	let day = d.getDate() - 1 
+	let day = d.getDate() - 1  // -1 для показа новостей за 1 день, а не за текущий
 	return (
 		d.getFullYear() +
 		"-" +
@@ -75,7 +75,7 @@ $base_fz: 16;
 }
 h2{
 	text-align: center;
-	padding: 30px 0;
+	padding: 70px 0;
 	&::after{
 		display: none;
 	}
@@ -164,5 +164,10 @@ h2{
 			padding: 0;
 		}
 	}
+}
+@media screen and (max-width: 800px) {
+h2{
+	padding: 30px 0;
+}
 }
 </style>

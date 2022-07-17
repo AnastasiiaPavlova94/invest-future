@@ -45,6 +45,11 @@ const routes = [
     path: '/all-blog',
     name: 'AllBlog',
     component: () => import('../components/AllBlog.vue')
+  },
+  {
+    path: '/:pathMatch(.*)',
+    name: 'PageView404',
+    component: () => import('../views/PageView404.vue')
   }
 ]
 
