@@ -1,19 +1,22 @@
 <template>
-<div class="blog">
-	<div class="blog_post" v-for="(item, index) in NewsData" :key="index">
-	<div>
-		<img :src="item.urlToImage" alt="post1" />
-	</div>
-	<div class="blog_post_content">
-		<h5 >{{newDataFormated}}</h5>
-		<h4>{{ item.title }}</h4>
-		<p>
-		{{ item.description }}
-			<router-link :to="{name: 'BlogCard', params:{title: item.title }}">
-				<span>Read More</span>
-			</router-link>
-		</p>
-	</div>
+<div class="container">
+		<h2>blog posts</h2>
+	<div class="blog">
+		<div class="blog_post" v-for="(item, index) in NewsData" :key="index">
+		<div>
+			<img :src="item.urlToImage" alt="post1" />
+		</div>
+		<div class="blog_post_content">
+			<h5 >{{newDataFormated}}</h5>
+			<h4>{{ item.title }}</h4>
+			<p>
+			{{ item.description }}
+				<router-link :to="{name: 'BlogCard', params:{title: item.title }}">
+					<span>Read More</span>
+				</router-link>
+			</p>
+		</div>
+		</div>
 	</div>
 </div>
 </template>
@@ -21,7 +24,7 @@
 <script>
 import axios from "axios";
 export default {
-name: "NewsCard",
+name: "AllBlog",
 data() {
 	return {
 	NewsData: [],
@@ -32,7 +35,7 @@ computed: {
 	newDataFormated() {
 	const d = new Date()
 	let month = d.getMonth() + 1
-	let day = d.getDate() - 1
+	let day = d.getDate() - 1 
 	return (
 		d.getFullYear() +
 		"-" +
@@ -47,11 +50,11 @@ created() {
 },
 methods: {
 	fetchData() {
-	let url = 'https://newsapi.org/v2/everything?q=Design&sortBy=popularity&apiKey=4364238301bb4d329a06c6ae22a91354'
+	let url = 'https://newsapi.org/v2/everything?q=Design&&sortBy=Design&apiKey=4364238301bb4d329a06c6ae22a91354'
 	url += '&from=' + this.newDataFormated
 	url += '&to=' + this.newDataFormated
 	url += '&language=en'
-	url += '&pageSize=3'
+	url += '&pageSize=9'
 	url += '&page=' + this.page
 	
 	axios
@@ -65,12 +68,18 @@ methods: {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 $base_fz: 16;
 @mixin fz($size_in_px){
     font-size:($size_in_px/$base_fz)+rem;
 }
-
+h2{
+	text-align: center;
+	padding: 30px 0;
+	&::after{
+		display: none;
+	}
+}
 .blog{
     display: grid;
     grid-template-rows: 1fr;
@@ -82,7 +91,7 @@ $base_fz: 16;
 		}
         &_content{
             position: relative;
-			height: 400px;
+			height: 360px;
             top: -50px;
             left: 1px;
             padding: 30px 35px;
@@ -156,5 +165,4 @@ $base_fz: 16;
 		}
 	}
 }
-
 </style>

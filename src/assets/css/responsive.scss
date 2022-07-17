@@ -2,27 +2,6 @@ $base_fz: 16;
 @mixin fz($size_in_px) {
     font-size: ($size_in_px/$base_fz)+rem;
 }
-@media screen and (max-width: 1500px) {
-    // BLOG -> latest
-    .latest .blog_post_content {
-        position: relative;
-        width: 275px;
-    }
-}
-@media screen and (max-width: 1300px) {
-    // .gallery {
-    //     max-width: 1063px;
-    //     grid-gap: 18px;
-    // }
-    .blog_section .blog_post_content {
-        width: 70%;
-        left: 18px;
-        height: 350px;
-    }
-    .blog_section .btn {
-        margin-top: 62px;
-    }
-}
 @media screen and (max-width: 1100px) {
     h2 {
         @include fz(40);
@@ -39,47 +18,11 @@ $base_fz: 16;
         height: 58px;
         @include fz(12);
         padding: 10px;
-    }
-    // .gallery {
-    //     margin-top: 70px;
-    // }
-    .blog_section p {
-        width: 100%;
-        padding-bottom: 80px;
-    }
-    .blog_section .blog_post_content {
-        left: 7px;
-    }
-}
-@media screen and (max-width: 900px) {
-    .blog_section {
-        .blog_post_content h4 {
-            @include fz(20);
-        }
-        .blog_post_content {
-            width: 70%;
-            left: 0;
-        }
-    }
-    .latblog_sectionest .blog_post_content {
-        height: 450px;
-    }
+    }   
 }
 @media screen and (max-width: 760px) {
     .back_img {
         background: url(../img/Rectangle_sect1.png) right top/100% no-repeat;
-    }
-    .blog_section .blog {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: 1fr;
-        gap: 40px;
-        margin-bottom: 40px;
-        &_post_content {
-            width: 70%;
-            left: 40px;
-            height: auto;
-        }
     }
     .header {
         nav {
@@ -87,11 +30,7 @@ $base_fz: 16;
         }
     }
 }
-@media screen and (max-width: 600px) {
-    .blog_section .blog_post_content {
-        width: 70%;
-        left: 23px;
-    }
+@media screen and (max-width: 600px) {  
     h2 {
         font-size: 1.5rem;
     }
@@ -100,24 +39,9 @@ $base_fz: 16;
     h3 {
         @include fz(18);
     }
-    .blog_section .btn {
-        margin-top: 0;
-    }
 }
 @media screen and (max-width: 400px) {
     #side_block {
         width: 290px;
-    }
-    .blog_post_content {
-        left: 9px;
-    }
-    .blog_section .blog_post_content {
-        left: 9px;
-    }
-    
-}
-@media screen and (max-width: 320px) {
-    .blog_section .blog_post_content {
-        left: 6px;
     }
 }

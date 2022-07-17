@@ -8,10 +8,11 @@
 		senectus dui ultricies dolor.
 		</p>
 		<news-card />
-	
-		<button class="btn">
-		View all blogs <span class="icon-long-arrow-right"></span>
-		</button>
+	<router-link to="/all-blog" class="blg_btn">
+			<button class="btn">
+			View all blogs <span class="icon-long-arrow-right"></span>
+			</button>
+	</router-link>
 	</div>
 	</div>
 </section>
@@ -29,15 +30,20 @@ export default {
 <style lang="scss">
 
 .blog_section{
-    display: flex;
-    flex-direction:column;
-    padding: 100px 0 100px 0;
-    .btn {
-		margin-top: 76px;
-        align-self: center;
-    }
+	display: flex;
+	flex-direction:column;
+	padding: 100px 0 100px 0;
+	.blg_btn {
+		width: 200px;
+		margin: 0 auto;
+	}
 	p{
-		margin-bottom: 30px;
+		padding-bottom: 30px;
 	}
 }
+// @media screen and (max-width: 1100px) {
+// 	.blog_section p {
+// 		width: 100%;
+// 	}
+// }
 </style>

@@ -39,7 +39,12 @@ const routes = [
   {
     path: '/blog-card/:title',
     name: 'BlogCard',
-    component: () => import('../views/BlogCard.vue')
+    component: () => import('../components/BlogCard.vue')
+  },
+  {
+    path: '/all-blog',
+    name: 'AllBlog',
+    component: () => import('../components/AllBlog.vue')
   }
 ]
 
