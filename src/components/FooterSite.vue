@@ -146,6 +146,14 @@ data() {
 	},
 	};
 },
+
+
+
+
+
+
+
+
 methods: {
 	sendEmail() {
 	let valid = true;
