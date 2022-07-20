@@ -201,7 +201,7 @@ height: 100vh;
 }
 @media screen and (max-width: 1150px) {
 	#invest .carousel  .slider_item {
-		gap: 35px;
+		gap: 0px;
 	}
 }
 @media screen and (max-width: 1100px) {

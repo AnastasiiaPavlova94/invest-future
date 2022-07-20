@@ -32,7 +32,7 @@ computed: {
 	newDataFormated() {
 	const d = new Date()
 	let month = d.getMonth() + 1
-	let day = d.getDate() - 1
+	let day = d.getDate()
 	return (
 		d.getFullYear() +
 		"-" +

@@ -70,7 +70,7 @@ computed: {
 	newDataFormated() {
 	const d = new Date()
 	let month = d.getMonth() + 1
-	let day = d.getDate() - 1 // -1 для показа новостей за 1 день, а не за текущий
+	let day = d.getDate()  // -1 для показа новостей за 1 день, а не за текущий
 	return (
 		d.getFullYear() +
 		"-" +

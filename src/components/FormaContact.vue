@@ -225,6 +225,9 @@ export default {
 	.contactMe img {
 		display: none;
 	}
+	.contactMe {
+    margin-top: 0px;
+	}
 }
 @media screen and (max-width: 760px) {
 	.contactMe {
@@ -265,7 +268,7 @@ export default {
 	.contactMe {
 		margin-left: 47px;
 		margin-bottom: 188px;
-		margin-top: 100px;
+		margin-top: 30px;
 	}
 	.contactMe {
 		width: 300px;
