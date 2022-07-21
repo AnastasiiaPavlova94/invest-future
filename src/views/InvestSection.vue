@@ -35,6 +35,17 @@ export default {
 		right: 0px;
 		z-index: 0;
 	}
+
+@media screen and (max-width: 900px) {
+	.back_img {
+		background: url(http://localhost:8081/img/Rectangle_sect1.33d571c2.png) right top/87% no-repeat;
+	}
+}
+@media screen and (max-width: 550px) {
+	.back_img {
+		background: url(http://localhost:8081/img/Rectangle_sect1.33d571c2.png) right top/100% no-repeat;
+	}
+}
 </style>
 
 

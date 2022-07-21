@@ -264,7 +264,10 @@ font-size: 1rem;
 	top: 35%;
 	}
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px){
+	#invest .slider h1 {
+		padding: 46px 0 17px 0px;
+	}
 	.carousel__prev {
 	top: 59%;
 	}
