@@ -2,6 +2,27 @@ $base_fz: 16;
 @mixin fz($size_in_px) {
     font-size: ($size_in_px/$base_fz)+rem;
 }
+
+@media screen and (max-width: 1400px) {
+	.blog {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: 1fr;
+		span{
+			top: 365px;
+		}
+	}
+	.blog_post {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		}
+	.blog_post_content {
+		position: absolute;
+		left: 42%;
+		right: 28px;
+		top: 33px;
+	}
+}
 @media screen and (max-width: 1100px) {
     h2 {
         @include fz(40);
@@ -34,6 +55,33 @@ $base_fz: 16;
     h2 {
         font-size: 1.5rem;
     }
+}
+
+
+@media screen and (max-width: 600px) {
+	.blog {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: 1fr;
+		span{
+			top: 365px;
+		}
+	}
+	.blog_post {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+		}
+	.blog_post_content {
+		position: absolute;
+		left: 9%;
+		right: 27px;
+		top: 235px;
+		height: 356px;
+	}
+		.blog span {
+		top: 624px;
+	}
+	
 }
 @media screen and (max-width: 550px) {
     h3 {

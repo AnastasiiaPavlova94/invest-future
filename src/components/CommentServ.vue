@@ -59,16 +59,6 @@ export default {
 		itemsToShow: 1,
 		snapAlign: 'left',
 			}
-	// breakpoints: {
-	// 	400: {
-	// 		itemsToShow: 1,
-	// 		snapAlign: 'left',
-	// 		},
-	// 	360: {
-	// 		itemsToShow: 1,
-	// 		snapAlign: 'left',
-	// 		},
-	// 	},
 		}
 	},
 		created() {
@@ -80,10 +70,7 @@ export default {
 </script>
 
 <style lang="scss">
-$base_fz: 16;
-@mixin fz($size_in_px){
-	font-size:($size_in_px/$base_fz)+rem;
-}
+
 .clients {
 	.comment{
 		display: grid;
@@ -111,13 +98,13 @@ $base_fz: 16;
 				//width: 604px;
 				padding-bottom: 33px;
 				font-weight: 300;
-				@include fz(22);
+				font-size: 22px;
 				line-height: 222.4%;
 				color: #5B5B5B;
 			}
 			h4{
 				font-weight: 500;
-				@include fz(26);
+				font-size: 26px;
 				line-height: 212.4%;
 				text-transform: capitalize;
 				color: #363535;
@@ -200,10 +187,6 @@ $base_fz: 16;
 	#comment_block .carousel__pagination {
 	top: 76%;
 	}
-// 	.clients .comment_item {
-// 		display: grid;
-// 		padding: 0px 10px 40px 65px;
-// 	}
 	.clients{
 		.comment_item {
 			h5 {
@@ -211,9 +194,6 @@ $base_fz: 16;
 			}
 		}
 	}
-// 	.carousel__pagination {
-// 		bottom: 95px;
-// 	}
 }
 @media screen  and (max-width: 400px) {
 	.clients .comment_item p {

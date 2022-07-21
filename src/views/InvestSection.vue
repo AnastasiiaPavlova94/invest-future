@@ -5,16 +5,23 @@
 						
 						<home-slider />
 
-					
+						<blog-section/>
+
+						<contact-section />
+
 				</div>
 			</section>
 </template>
 
 <script>
 import HomeSlider from '../components/HomeSlider.vue';
+import BlogSection from '../components/BlogSection.vue';
+import ContactSection from '../views/ContactSection.vue';
 export default {
 	components: {
 		HomeSlider,
+		BlogSection,
+		ContactSection,
 	}
 }
 </script>
@@ -29,4 +36,5 @@ export default {
 		z-index: 0;
 	}
 </style>
+
 

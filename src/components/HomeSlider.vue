@@ -70,21 +70,19 @@ export default {
 
 $font_Rubik: 'Rubik';
 $font_Prata: 'Prata';
-$base_fz: 16;
-@mixin fz($size_in_px) {
-	font-size: ($size_in_px/$base_fz) + rem;
-}
 
 
 #invest{
 margin-left: 65px;
 height: 100vh;
+margin-bottom: 100px;
+font-family: $font_Prata;
 .slider{
 		position: relative;
 		z-index: 11;
 		h1{
-		font-family: $font_Prata;
-		@include fz(90);
+		
+		font-size: 90px;
 		font-style: normal;
 		font-weight: 400;
 		line-height: 110%;
@@ -94,7 +92,7 @@ height: 100vh;
 		color: #201F1F;
 		}
 		p{
-		@include fz(19);
+		font-size: 19px;
 		line-height: 225.9%;
 		letter-spacing: 0.02em;
 		color: #888888;
@@ -208,8 +206,7 @@ height: 100vh;
 #invest{
 	.slider{
 		h1{
-		font-family: $font_Prata;
-		@include fz(60);
+		font-size: 60px;
 		}
 	}
 }
@@ -234,8 +231,7 @@ font-size: 1rem;
 #invest{
 	.slider{
 		h1{
-		font-family: $font_Prata;
-		@include fz(40);
+		font-size: 40px;
 		width: auto;
 		}
 	}

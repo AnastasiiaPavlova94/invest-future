@@ -17,13 +17,11 @@ export default {
 <style lang="scss" scoped>
 	h3{
 			font-size: 7rem;
-			//line-height: 172.4%;
 			color: #f1e6e6;;
 			text-align: center;
 			text-shadow: #b3b3b3 1px 0 10px
 	}
 	.page404{
-		//width: 600px;
 		margin: 100px auto;
 		height: 100vh;
 	}

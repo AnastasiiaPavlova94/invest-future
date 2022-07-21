@@ -60,12 +60,8 @@ export default {
 
 <style lang="scss" scoped>
 
-$base_fz: 16;
 $font_Prata: 'Prata';
-$color_blue: #5474FD;
-@mixin fz($size_in_px){
-	font-size:($size_in_px/$base_fz)+rem;
-}
+
 .clients{
 	padding-bottom: 250px;
 	padding-top: 250px;
@@ -78,7 +74,7 @@ $color_blue: #5474FD;
 			align-items: flex-end;
 			h5 span{
 				font-family: $font_Prata;
-				@include fz(120);
+				font-size: 120px;
 				line-height: 129.4%;
 				text-transform: capitalize;
 				color: #DEDEDE;

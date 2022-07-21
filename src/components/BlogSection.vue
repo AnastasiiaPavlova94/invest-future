@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import NewsCard from '../components/NewsCard.vue';
+import NewsCard from './NewsCard.vue';
 export default {
  components: {
 	NewsCard
@@ -28,7 +28,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .blog_section{
 	display: flex;
 	flex-direction:column;
@@ -37,13 +36,5 @@ export default {
 		width: 200px;
 		margin: 0 auto;
 	}
-	p{
-		padding-bottom: 30px;
-	}
 }
-// @media screen and (max-width: 1100px) {
-// 	.blog_section p {
-// 		width: 100%;
-// 	}
-// }
 </style>

@@ -1,24 +1,16 @@
 <template>
 	<div class="container">
-
 		<router-link to="/all-blog" class="blg_btn">
 			<span class="come_back">← All blogs</span>
 		</router-link>
-
-
 		<h1>{{item.title}}</h1>
 			<div class="news">
-		
 				<div class="news_content">
-					<h3>{{item.description}} 
+					<h3 v-html="item.description"></h3>
 						<a :href="item.url" target="_blank" rel="nofollow, noreferrer">Full information</a>
-					</h3>
 					<h5>Author: {{item.author}}</h5>
 				</div>
-			
-	
 				<img :src="item.urlToImage" alt="post1" />
-			
 		</div>
 	</div>
 </template>

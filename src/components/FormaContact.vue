@@ -7,7 +7,7 @@
 								help. Feel free to contact us.
 							</p>
 
-				<div v-if="answer.success" role="alert">
+<div v-if="answer.success" role="alert">
 	<div class="sendSubmit">{{ answer.text }}</div>
 </div>
 <div v-if="answer.success === false" role="alert">
@@ -15,9 +15,6 @@
 </div>
 
 <form
-	method="post"
-	enctype="multipart/form-data"
-	action="#"
 	class="contactMe_item_form"
 	@submit.prevent="checkAndSend"
 >
@@ -47,7 +44,7 @@
 	</div>
 	<div class="heiChek">
 	<input
-		type="email"
+		type="text"
 		name="E-mail"
 		placeholder="Your Email Address*"
 		:class="{ 'is-invalid': errors.email !== '' }"
@@ -59,7 +56,7 @@
 	</div>
 	<div class="heiChek">
 	<input
-		type="tel"
+		type="text"
 		name="Tel"
 		placeholder="Your Phone Number"
 		:class="{ 'is-invalid': errors.phone !== '' }"
@@ -75,13 +72,13 @@
 		name="Text"
 		placeholder="Your Message*"
 		class="mess"
-		:class="{ 'is-invalid': errors.massager !== '' }"
-		id="massager"
-		v-model.trim="massager"
-		@focus="resetError('name')"
+		:class="{ 'is-invalid': errors.messenger !== '' }"
+		id="messenger"
+		v-model.trim="messenger"
+		@focus="resetError('messenger')"
 	/>
 	<div class="plError"></div>
-	<div class="err_text">{{ errors.massager }}</div>
+	<div class="err_text">{{ errors.messenger }}</div>
 	</div>
 	<button class="btn" type="submit">submit</button>
 </form>
@@ -99,13 +96,13 @@ export default {
 	firstName: "",
 	lastName: "",
 	email: "",
-	massager: "",
+	messenger: "",
 	phone: "",
 	errors: {
 		firstName: "",
 		lastName: "",
 		email: "",
-		massager: "",
+		messenger: "",
 		phone: "",
 		emailSub: "",
 	},
@@ -139,10 +136,10 @@ export default {
 		this.errors.email = "Enter email";
 		valid = false;
 		} else {
-		if (this.isValidEmail(this.email) === false) {
-			this.errors.email = "Enter valid email";
-			valid = false;
-		}
+			if (this.isValidEmail(this.email) === false) {
+				this.errors.email = "Enter valid email";
+				valid = false;
+			}
 		}
 		if (this.phone === "") {
 		this.errors.phone = "Enter your phone namber";
@@ -152,8 +149,8 @@ export default {
 		this.errors.phone = "Enter your phone namber";
 		valid = false;
 		}
-		if (this.massager === "") {
-		this.errors.massager = "Enter massager";
+		if (this.messenger === "") {
+		this.errors.messenger = "Enter messenger";
 		valid = false;
 		}
 		if (valid) {
@@ -168,7 +165,7 @@ export default {
 			"%0a<b>Email: </b>" +
 			this.email +
 			"%0a<b>Massager: </b>" +
-			this.massager;
+			this.messenger;
 		fetch(
 			`https://api.telegram.org/bot${this.API_BOT_ID}/sendMessage?chat_id=${this.CHAT_ID}&text=${messeger_text}&parse_mode=HTML`
 		)
@@ -179,6 +176,7 @@ export default {
 			if (resp.ok) {
 				this.answer.success = true;
 				this.answer.text = "Massager successfully send";
+				this.firstName = this.lastName = this.email = this.messenger = this.phone = '';
 			} else {
 				this.answer.success = false;
 				this.answer.text = resp.description;
@@ -200,13 +198,15 @@ export default {
 	isValidEmail(email) {
 		return Boolean(
 		email.match(
-		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|("+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+			// eslint-disable-next-line no-use-before-define
+		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 		)
 		);
 	},
 	isValidPhone(phone) {
 		return Boolean(
 		phone.match(
+			// eslint-disable-next-line no-use-before-define
 			/^((8|\+3)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d\- ]{7,10}$/
 		)
 		);

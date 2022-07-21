@@ -109,7 +109,6 @@ created() {
 		}
 	}
 	&_qvesh {
-		// height: 900px;
 		&_item {
 		display: grid;
 		grid-template-columns: 1fr 20px;
@@ -129,7 +128,6 @@ created() {
 @media screen and (max-width: 1100px){
 	.faqs {
 		grid-template-columns: 1fr;
-		// padding-top: 130px;
 			&_item{
 			padding-bottom: 30px;
 				h2{

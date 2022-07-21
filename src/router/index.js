@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
@@ -32,9 +32,14 @@ const routes = [
     component: () => import('../views/ContactSection.vue')
   },
   {
+    path: '/contact-section',
+    name: 'ContactSection',
+    component: () => import('../views/ContactSection.vue')
+  },
+  {
     path: '/blog-section',
     name: 'BlogSection',
-    component: () => import('../views/BlogSection.vue')
+    component: () => import('../components/BlogSection.vue')
   },
   {
     path: '/blog-card/:title',
@@ -54,7 +59,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
   scrollBehavior(){
     return {

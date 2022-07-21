@@ -117,11 +117,6 @@ export default {
 	}
 }
  }
-	// @media screen and (max-width: 700px){
-	// 	.btn{
-	// 		display: flex;
-	// 	}
-	// }
 @media screen and (max-width: 600px){
 	h2 {
 		font-size: 2.5rem;

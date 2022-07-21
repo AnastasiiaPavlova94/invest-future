@@ -57,7 +57,7 @@
 			<li>
 			<router-link to="/portfolio-section">Portfolios</router-link>
 			</li>
-			<li><router-link to="/blog-section">Blogs</router-link></li>
+			<li><router-link to="/all-blog">Blogs</router-link></li>
 			<li><router-link to="/contact-section">Contact Us</router-link></li>
 		</ul>
 		</div>
@@ -96,15 +96,20 @@
 			Subscribe to our newsletter to stay updated for new products and
 			stunnning news.
 		</p>
+		
+<div v-if="answer.success" role="alert">
+	<div class="sendSubmit">{{ answer.text }}</div>
+</div>
+<div v-if="answer.success === false" role="alert">
+	<div class="errSubmit">{{ answer.text }}</div>
+</div>
+<div class="reservErr"></div>
 		<form
-			method="post"
-			enctype="multipart/form-data"
-			action="#"
 			@submit.prevent="sendEmail"
 		>
 			<div class="send">
 			<input
-				type="email"
+				type="text"
 				name="E-mail"
 				placeholder="Enter Your Email Address"
 				:class="{ 'is-invalid': errors.emailSub !== '' }"
@@ -115,7 +120,7 @@
 				send<span class="icon-paper-plane"></span>
 			</button>
 			</div>
-			<!-- <div class="err_text">{{ errors.email }}</div> -->
+			<div class="err_text">{{ errors.emailSub }}</div> 
 		</form>
 		</div>
 	</div>
@@ -146,14 +151,6 @@ data() {
 	},
 	};
 },
-
-
-
-
-
-
-
-
 methods: {
 	sendEmail() {
 	let valid = true;
@@ -178,7 +175,8 @@ methods: {
 		.then((resp) => {
 			if (resp.ok) {
 			this.answer.success = true;
-			this.answer.text = "Massager successfully send";
+			this.answer.text = "Message successfully send";
+			this.emailSub = '';
 			} else {
 			this.answer.success = false;
 			this.answer.text = resp.description;
@@ -200,7 +198,8 @@ methods: {
 	isValidEmail(email) {
 	return Boolean(
 		email.match(
-		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|("+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+			// eslint-disable-next-line no-use-before-define
+		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 		)
 	);
 	},
@@ -209,9 +208,21 @@ methods: {
 </script>
 
 <style lang="scss">
-$base_fz: 16;
-@mixin fz($size_in_px) {
-font-size: ($size_in_px/$base_fz) + rem;
+
+.reservErr{
+    height: 55px;
+}
+.fot_top .subscribe .err_text {
+	top: 6px;
+}
+.fot_top .subscribe .sendSubmit,
+.fot_top .subscribe .errSubmit{
+	position: absolute;
+	bottom: 54px;
+	padding: 10px 0;
+	height: 15px;
+	width: 100%;
+	line-height: 13px;
 }
 footer {
 background-color: #f0f0f0;
@@ -256,7 +267,7 @@ h4 {
 	a {
 		width: 38px;
 		height: 38px;
-		@include fz(14);
+		font-size: 14px;
 		line-height: 14px;
 		color: #a5a5a5;
 		box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.07);
@@ -302,11 +313,11 @@ h4 {
 	}
 }
 .subscribe {
+	position: relative;
 	p {
 	width: 356px;
 	}
 	.send {
-	margin-top: 40px;
 	background-color: #fff;
 	width: 406px;
 	box-shadow: 0px 15px 44px 0px rgba(0, 0, 0, 0.06);
@@ -316,8 +327,7 @@ h4 {
 		height: 50px;
 		background-color: #fff;
 		padding-left: 24px;
-		@include fz(15);
-		color: #b7b7b7;
+		font-size: 15px;
 		border: none;
 		&:active,
 		&:focus {
@@ -366,6 +376,9 @@ h4 {
 	margin-top: 10px;
 	}
 }
+.fot_top .subscribe .err_text {
+    top: -62px;
+}
 }
 @media screen and (max-width: 760px) {
 footer {
@@ -395,7 +408,7 @@ footer {
 }
 @media screen and (max-width: 600px) {
 .fot_bot {
-	@include fz(12);
+	font-size: 12px;
 }
 }
 @media screen and (max-width: 550px) {
@@ -413,7 +426,7 @@ footer {
 		width: 300px;
 	}
 .fot_top .contact_element a {
-		@include fz(14);
+		font-size: 14px;
 	}
 }
 @media screen and (max-width: 320px) {
@@ -426,7 +439,7 @@ footer {
 			}
 		}
 		.contact_element {
-			@include fz(14);
+			font-size: 14px;
 			margin-right: 0px;
 		}
 	}
