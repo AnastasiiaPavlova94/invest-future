@@ -31,7 +31,7 @@ export default {
 .blog_section{
 	display: flex;
 	flex-direction:column;
-	padding: 100px 0 100px 0;
+	padding: 0 0 100px 0;
 	.blg_btn {
 		width: 200px;
 		margin: 0 auto;
