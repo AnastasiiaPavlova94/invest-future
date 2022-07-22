@@ -59,6 +59,15 @@ a{
   }
 }
 
+.img_anim{
+  object-fit: cover;
+  animation: imgZoom 3.5s ease infinite;
+}
+@keyframes imgZoom {
+  0% {transform: scale(1) rotate(0deg);}
+  50% {transform: scale(1.1) rotate(3deg);}
+  100% {transform: scale(1) rotate(0deg);}
+}
 
 .blog{
 	display: grid;
@@ -81,6 +90,8 @@ a{
 			margin-bottom: 116px;
 			.img{
 				height: 300px;
+        overflow: hidden;
+        border-radius: 7px;
 				}
 			&_content{
 					overflow: hidden;

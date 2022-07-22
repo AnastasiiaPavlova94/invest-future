@@ -12,7 +12,9 @@
 			</div>
 			<div class="block" v-for="(ab, index) in AboutData" :key="index" :class="index%2 != 1 ? 'revers' : ' '">
 					<p>{{ ab.text }}</p>
-					<img :src="require('@/assets/img/' + ab.img)" alt="postAbout">
+					
+						<img :src="require('@/assets/img/' + ab.img)" alt="postAbout">
+					
 				</div>
 
 				<div class="bt">

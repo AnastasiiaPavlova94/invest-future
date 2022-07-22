@@ -124,6 +124,9 @@ export default {
 		&:first-child{
 			grid-area: 1 / 1 / 3 / 3;
 		}
+		&:hover{
+			background: red;
+		}
 	}
 }
 .revers{

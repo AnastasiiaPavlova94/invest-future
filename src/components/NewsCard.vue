@@ -3,7 +3,7 @@
 	<div class="blog_post" v-for="(item, index) in NewsData" :key="index">
 	<div class="img">
 		<router-link :to="{name: 'BlogCard', params:{title: item.title }}">
-				<img :src="item.urlToImage" alt="post1" @error="errorImg" />
+				<img class="img_anim" :src="item.urlToImage" alt="post1" @error="errorImg" />
 		</router-link>
 	</div>
 	<div class="blog_post_content">
