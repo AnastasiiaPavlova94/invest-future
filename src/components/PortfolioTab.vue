@@ -121,12 +121,31 @@ export default {
 	grid-gap: 60px;
 	margin-bottom: 100px;
 	a{
+		display: block;
+		position: relative;
+		&:before{
+			content: '+';
+			width: 100%;
+			height: 100%;
+			position:absolute;
+			top: 0;
+			left: 0;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 100px;
+			background-color: #2e2e2e;
+			opacity: 0;
+			transition: .4s ease all;
+		}
+		&:hover::before{
+			opacity: .5;
+		}
 		&:first-child{
 			grid-area: 1 / 1 / 3 / 3;
 		}
-		&:hover{
-			background: red;
-		}
+		
 	}
 }
 .revers{
@@ -161,7 +180,7 @@ export default {
 	.revers{
 		a{
 			&:first-child{
-				grid-area: 1/ 2 / 1 / 1;
+				grid-area: 3/ 3 / 5 / 1;
 			}
 		}
 	}

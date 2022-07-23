@@ -1,8 +1,8 @@
 <template>
 <div class="container">
 	<div class="page404">
-		<h3>Ooops...</h3>
-		<h3>Something went wrong!</h3>
+		<h3>404</h3>
+		<h4>Page not found</h4>
 	</div>
 
 </div>
@@ -15,11 +15,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	h3{
-			font-size: 7rem;
-			color: #f1e6e6;;
+	h3, h4{
+			font-size: 10rem;
+			color: #939393;
 			text-align: center;
-			text-shadow: #b3b3b3 1px 0 10px
+			text-shadow: #b3b3b3 1px 0 10px;
+			font-family: 'Prata';
+	}
+	h4{
+		font-size: 3rem;
 	}
 	.page404{
 		margin: 100px auto;

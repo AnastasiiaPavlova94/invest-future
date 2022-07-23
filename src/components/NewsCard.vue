@@ -65,7 +65,7 @@ methods: {
 	})
 	},
 	errorImg(e){
-		e.target.src = 'https://via.placeholder.com/430x265'
+		e.target.src = require('@/assets/img/plaseholder.png')
 	}
 }
 }
