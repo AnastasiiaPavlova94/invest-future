@@ -1,6 +1,6 @@
 <template>
 <section>
-	<div class="container">
+	<div class="container" v-if="FaqsServData!=null">
 	<div class="faqs">
 		<div class="faqs_item">
 		<h2>FAQS</h2>
@@ -48,7 +48,7 @@ components: {
 name: "FaqsServ",
 data() {
 	return {
-	FaqsServData: [],
+	FaqsServData: null,
 	};
 },
 created() {

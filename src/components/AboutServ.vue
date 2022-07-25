@@ -1,6 +1,6 @@
 <template>
 	<section>
-	<div class="container">
+	<div class="container" v-if="AboutServData!==null">
 	<div class="services" id="sr">
 		<div>
 		<h2>Vuiws my services</h2>
@@ -28,7 +28,7 @@ export default {
 	name: "AboutServ",
 	data() {
 		return {
-		AboutServData: [],
+		AboutServData: null,
 		};
 	},
 	created() {

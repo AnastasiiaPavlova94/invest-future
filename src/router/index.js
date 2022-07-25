@@ -7,7 +7,7 @@ const routes = [
     component: () => import('../views/HomeView.vue')
   },
   {
-    path: '/invest-section',
+    path: '/invest-section',  
     name: 'InvestSection',
     component: () => import('../views/InvestSection.vue')
   },
@@ -39,17 +39,17 @@ const routes = [
   {
     path: '/blog-section',
     name: 'BlogSection',
-    component: () => import('../components/BlogSection.vue')
+    component: () => import('../components/blog/BlogSection.vue')
   },
   {
     path: '/blog-card/:title',
     name: 'BlogCard',
-    component: () => import('../components/BlogCard.vue')
+    component: () => import('../components/news/NewCard.vue')
   },
   {
     path: '/all-blog',
     name: 'AllBlog',
-    component: () => import('../components/AllBlog.vue')
+    component: () => import('../components/news/AllNews.vue')
   },
   {
     path: '/:pathMatch(.*)',

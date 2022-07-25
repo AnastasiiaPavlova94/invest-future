@@ -1,5 +1,5 @@
 <template>
-<section id="comment_block">
+<section id="comment_block" v-if="CommentServData!==null">
 	<div class="container">
 	<div class="clients">
 		<div class="comment">
@@ -54,7 +54,7 @@ export default {
 	},
 	data() {
 		return {
-		CommentServData: [],
+		CommentServData: null,
 		settings: {
 		itemsToShow: 1,
 		snapAlign: 'left',

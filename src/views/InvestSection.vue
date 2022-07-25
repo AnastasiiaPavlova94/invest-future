@@ -15,7 +15,7 @@
 
 <script>
 import HomeSlider from '../components/HomeSlider.vue';
-import BlogSection from '../components/BlogSection.vue';
+import BlogSection from '../components/blog/BlogSection.vue';
 import ContactSection from '../views/ContactSection.vue';
 export default {
 	components: {

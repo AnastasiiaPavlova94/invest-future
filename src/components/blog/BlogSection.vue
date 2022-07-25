@@ -7,7 +7,7 @@
 		Id at urna non viverra eu volutpat porttitor elementum. Viverra
 		senectus dui ultricies dolor.
 		</p>
-		<blog-card />
+		<blog-cards />
 	<router-link to="/all-blog" class="blg_btn">
 			<button class="btn">
 			View all blogs <span class="icon-long-arrow-right"></span>
@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import BlogCard from './BlogCard.vue';
+import BlogCards from './BlogCards.vue';
 export default {
  components: {
-	BlogCard
+	BlogCards
 }
 }
 </script>

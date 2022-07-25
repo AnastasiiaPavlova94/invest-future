@@ -78,12 +78,12 @@ methods: {
 		.get(url)
 		.then((resp) => {
 			if(resp.data.articles.length === 0){
-				this.$$router.push('/PageView404')
+				this.$router.push('/PageView404')
 			}
 			this.NewsData = resp.data.articles
 		})
 		.catch(()=>{
-			this.$$router.push('/PageView404')
+			this.$router.push('/PageView404')
 		})
 	},
 	goToPageFetch(p){

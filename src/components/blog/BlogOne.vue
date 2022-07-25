@@ -7,10 +7,9 @@
 			<div class="news">
 				<div class="news_content">
 					<h3 v-html="item.description"></h3>
-						<a :href="item.url" target="_blank" rel="nofollow, noreferrer">Full information</a>
-					<h5>Author: {{item.author}}</h5>
+						<!-- <a :href="item.url" target="_blank" rel="nofollow, noreferrer">Full information</a> -->
 				</div>
-				<img :src="item.urlToImage" alt="post1" />
+				<img :src="item.img" alt="post1" />
 		</div>
 	</div>
 </template>
@@ -22,14 +21,6 @@ export default {
 		return{
 			item: {}
 		}
-	},
-	created(){
-		let url = `https://newsapi.org/v2/everything?q=${this.$route.params.title}&serchIn=title&sortBy=popularity&apiKey=4364238301bb4d329a06c6ae22a91354`
-		axios
-		.get(url)
-		.then(resp=>
-			this.item = resp.data.articles[0]
-		)
 	}
 }
 </script>

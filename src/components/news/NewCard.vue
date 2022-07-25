@@ -30,6 +30,13 @@ export default {
 		.then(resp=>
 			this.item = resp.data.articles[0]
 		)
+
+	// created() {
+	// 	axios
+	// 	.get("data/blog.json").then((resp) => {
+	// 		this.BlogData = resp.data;
+	// 		consol.log('resp.data')
+	// 	});
 	}
 }
 </script>

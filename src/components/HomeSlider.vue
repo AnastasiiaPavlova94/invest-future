@@ -1,6 +1,6 @@
 <template>
 <div id="invest">
-	<div class="slider">
+	<div class="slider" v-if="HomeSliderData!==null">
 	<carousel :items-to-show="1" :wrap-around="true">
 		<slide v-for="slide in HomeSliderData" :key="slide">
 				<h1>Invest in your Future, Invest with us</h1>
@@ -41,7 +41,7 @@ export default {
 	},
 	data() {
 		return {
-		HomeSliderData: [],
+		HomeSliderData: null,
 		count: 1,
 		page:1,
 		pageTo: 0,
