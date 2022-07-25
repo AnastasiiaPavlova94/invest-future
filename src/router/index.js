@@ -66,5 +66,6 @@ const router = createRouter({
       top:0
     }
   },
+  base:'invest-future',
 })
 export default router
