@@ -33,7 +33,7 @@ export default {
 	},
 	created() {
 		axios
-		.get("../data/abautserv.json").then((resp) => {
+		.get("data/abautserv.json").then((resp) => {
 			this.AboutServData = resp.data;
 		});
 	},

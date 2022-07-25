@@ -55,7 +55,7 @@ export default {
 	},
 	created() {
 		axios
-		.get("../data/famosebild.json").then((resp) => {
+		.get("data/famosebild.json").then((resp) => {
 			this.HomeSliderData = resp.data;
 			this.pageTo = this.HomeSliderData.length
 			console.log(this.pageTo)

@@ -72,7 +72,7 @@ export default {
 	},
 	created() {
 		axios
-		.get("../data/gallery.json").then((resp) => {
+		.get("data/gallery.json").then((resp) => {
 			this.GalleryDAta = resp.data;
 		});
 	},

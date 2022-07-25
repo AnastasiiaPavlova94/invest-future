@@ -62,7 +62,7 @@ export default {
 		}
 	},
 		created() {
-			axios.get("../data/comment.json").then((resp) => {
+			axios.get("data/comment.json").then((resp) => {
 			this.CommentServData = resp.data;
 			});
 		},

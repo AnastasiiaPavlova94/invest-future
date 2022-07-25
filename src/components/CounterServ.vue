@@ -35,7 +35,7 @@ export default {
 	},
 	created() {
 		axios
-		.get("../data/counter.json").then((resp) => {
+		.get("data/counter.json").then((resp) => {
 			this.CountertServData = resp.data;
 
 		});

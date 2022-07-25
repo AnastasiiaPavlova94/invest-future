@@ -52,7 +52,7 @@ data() {
 	};
 },
 created() {
-	axios.get("../data/faqs.json").then((resp) => {
+	axios.get("data/faqs.json").then((resp) => {
 	this.FaqsServData = resp.data;
 	});
 },

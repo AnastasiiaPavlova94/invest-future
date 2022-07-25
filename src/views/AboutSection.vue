@@ -37,7 +37,7 @@ export default {
 	},
 	created() {
 		axios
-		.get("../data/about.json").then((resp) => {
+		.get("data/about.json").then((resp) => {
 			this.AboutData = resp.data;
 		});
 	},
