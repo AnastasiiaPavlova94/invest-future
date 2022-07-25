@@ -1,1 +1,1 @@
-See [Configuration Reference](https://anastasiiapavlova94.github.io/invest-future/).
+See [link](https://anastasiiapavlova94.github.io/invest-future/).
