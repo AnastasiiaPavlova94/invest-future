@@ -109,9 +109,6 @@
 			<li>
 				<router-link to="/portfolio-section">Portfolio</router-link>
 			</li>
-			<li>
-				<router-link to="/all-blog">Blogs</router-link>
-			</li>
 			<li><router-link to="/contact-section">Contact</router-link></li>
 			</ul>
 		</nav>
