@@ -16,9 +16,9 @@
 			
 			
 	</div>
-	<!-- <router-link :to="{name: 'BlogCard', params:{title: item.title }}">
+	<router-link :to="{name: 'BlogOne', params:{title: item.title }}">
 				<span>Read More</span>
-			</router-link> -->
+			</router-link>
 	</div>
 </div>
 </template>

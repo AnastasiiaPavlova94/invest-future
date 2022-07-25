@@ -1,5 +1,5 @@
 <template>
-	<section id="counter-section">
+	<section id="counter-section" v-if="CountertServData!==null">
 		<div class="container">
 			<div class="clients">
 					<div class="counter">
@@ -25,7 +25,7 @@ export default {
 	},
 	data() {
 		return {
-		CountertServData: [],
+		CountertServData: null,
 		};
 	},
 	computed:{

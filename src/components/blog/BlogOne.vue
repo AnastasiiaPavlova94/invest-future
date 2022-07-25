@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<router-link to="/all-blog" class="blg_btn">
+		<router-link to="/all-news" class="blg_btn">
 			<span class="come_back">← All blogs</span>
 		</router-link>
 		<h1>{{item.title}}</h1>
