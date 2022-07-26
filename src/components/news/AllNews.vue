@@ -40,6 +40,7 @@ data() {
 	NewsData: null,
 	page: 1,
 	total: 0,
+	totalResults: 0,
 	pageSize: 9
 	};
 },
@@ -57,9 +58,10 @@ computed: {
 	)
 	},
 	totalPages(){
-		const pages = Math.ceil(this.NewsData.totalResults / this.pageSize)
+		const pages = Math.ceil(this.totalResults / this.pageSize)
+		console.log(pages)
 		const maxPage = Math.ceil(99 / this.pageSize)
-		return this.NewsData.totalResults < 99 ? pages : maxPage
+		return this.totalResults < 99 ? pages : maxPage
 	}
 },
 created() {
@@ -81,6 +83,7 @@ methods: {
 				this.$router.push('/PageView404')
 			}
 			this.NewsData = resp.data.articles
+			this.totalResults = resp.data.totalResults
 		})
 		.catch(()=>{
 			this.$router.push('/PageView404')

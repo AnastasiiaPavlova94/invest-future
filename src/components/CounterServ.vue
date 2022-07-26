@@ -1,5 +1,5 @@
 <template>
-	<section id="counter-section" v-if="CountertServData!==null">
+	<section id="counter-section">
 		<div class="container">
 			<div class="clients">
 					<div class="counter">
@@ -63,7 +63,7 @@ export default {
 $font_Prata: 'Prata';
 
 .clients{
-	padding-bottom: 250px;
+	padding-bottom: 197px;
 	padding-top: 250px;
 	.counter{
 		display: grid;
@@ -72,7 +72,11 @@ $font_Prata: 'Prata';
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
-			h5 span{
+			gap: 20px;
+			h5{
+				// width: 200px;
+				// padding: 10px;
+				span{
 				font-family: $font_Prata;
 				font-size: 120px;
 				line-height: 129.4%;
@@ -81,12 +85,16 @@ $font_Prata: 'Prata';
 				padding-right: 8px;
 				display: inline-block;
 				flex-basis: 25%;
-			}
+				width: 150px;
+				transform: 1s all solid;
+				}
+			} 
 			span{
 				line-height: 212.4%;
 				text-transform: uppercase;
 				color: #5B5B5B;
 				padding-bottom: 25px;
+				position: sticky;
 			}
 		}
 	}

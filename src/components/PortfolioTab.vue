@@ -189,5 +189,9 @@ export default {
 	.tabs-component-tabs {
 		width: 268px;
 	}
+	h2{
+		text-align: left;
+		padding: 18px 0;
+	}
 }
 </style>

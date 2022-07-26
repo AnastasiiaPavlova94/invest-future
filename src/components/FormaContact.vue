@@ -72,13 +72,13 @@
 		name="Text"
 		placeholder="Your Message*"
 		class="mess"
-		:class="{ 'is-invalid': errors.messenger !== '' }"
-		id="messenger"
-		v-model.trim="messenger"
-		@focus="resetError('messenger')"
+		:class="{ 'is-invalid': errors.Message !== '' }"
+		id="Message"
+		v-model.trim="Message"
+		@focus="resetError('Message')"
 	/>
 	<div class="plError"></div>
-	<div class="err_text">{{ errors.messenger }}</div>
+	<div class="err_text">{{ errors.Message }}</div>
 	</div>
 	<button class="btn" type="submit">submit</button>
 </form>
@@ -96,13 +96,13 @@ export default {
 	firstName: "",
 	lastName: "",
 	email: "",
-	messenger: "",
+	Message: "",
 	phone: "",
 	errors: {
 		firstName: "",
 		lastName: "",
 		email: "",
-		messenger: "",
+		Message: "",
 		phone: "",
 		emailSub: "",
 	},
@@ -149,8 +149,8 @@ export default {
 		this.errors.phone = "Enter your phone namber";
 		valid = false;
 		}
-		if (this.messenger === "") {
-		this.errors.messenger = "Enter messenger";
+		if (this.Message === "") {
+		this.errors.Message = "Enter Message";
 		valid = false;
 		}
 		if (valid) {
@@ -165,7 +165,7 @@ export default {
 			"%0a<b>Email: </b>" +
 			this.email +
 			"%0a<b>Massager: </b>" +
-			this.messenger;
+			this.Message;
 		fetch(
 			`https://api.telegram.org/bot${this.API_BOT_ID}/sendMessage?chat_id=${this.CHAT_ID}&text=${messeger_text}&parse_mode=HTML`
 		)
@@ -176,7 +176,7 @@ export default {
 			if (resp.ok) {
 				this.answer.success = true;
 				this.answer.text = "Massager successfully send";
-				this.firstName = this.lastName = this.email = this.messenger = this.phone = '';
+				this.firstName = this.lastName = this.email = this.Message = this.phone = '';
 			} else {
 				this.answer.success = false;
 				this.answer.text = resp.description;

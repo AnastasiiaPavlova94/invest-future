@@ -1,5 +1,5 @@
 <template>
-<div class="blog">
+<div class="blog" v-if="BlogData!==null">
 	<div class="blog_post" v-for="(item, index) in BlogData" :key="index">
 	<div class="img">
 		<!-- <router-link :to="{name: 'BlogCard', params:{title: item.title }}"> -->
@@ -16,9 +16,9 @@
 			
 			
 	</div>
-	<router-link :to="{name: 'BlogOne', params:{title: item.title }}">
+	<!-- <router-link :to="{name: 'BlogOne', params:{title: item.title }}">
 				<span>Read More</span>
-			</router-link>
+			</router-link> -->
 	</div>
 </div>
 </template>
@@ -28,7 +28,7 @@ export default {
 name: "BlogCard",
 data() {
 	return {
-	BlogData: [],
+	BlogData: null,
 	};
 },
 created() {

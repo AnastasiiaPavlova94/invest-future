@@ -108,8 +108,6 @@ font-family: $font_Prata;
 				
 		}
 }
-	
-}
 .carousel__slide {
 	flex-direction: column;
 	text-align: left;
@@ -197,6 +195,7 @@ font-family: $font_Prata;
 		color: #91795C;
 	}
 }
+}
 @media screen and (max-width: 1150px) {
 	#invest .carousel  .slider_item {
 		gap: 0px;
@@ -245,7 +244,7 @@ font-size: 1rem;
 @media screen and (max-width: 600px) {
 	#invest .slider h1 {
 		font-size: 2rem;
-		padding: 228px 0 17px 0px;
+		padding: 120px 0 17px 0px;
 	}
 	#invest .slider p {
     font-size: 1rem;
@@ -254,10 +253,11 @@ font-size: 1rem;
 	#invest {
 		height: auto;
 	}
-	.carousel__prev {
+	#invest .carousel__prev {
 	top: 69%;
+	left: -50px;
 	}
-	.carousel__next {
+	#invest.car ousel__next {
 	top: 80%;
 	}
 	.carousel__pagination {
