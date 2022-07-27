@@ -68,7 +68,7 @@ export default {
 		grid-template-columns: 470px 1fr;
 		gap: 10px;
 		h2{
-			font-size: 2rem;
+			font-size: 2.5rem;
 		}
 	}
 }

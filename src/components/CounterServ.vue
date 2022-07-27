@@ -5,7 +5,7 @@
 					<div class="counter">
 						<div class="counter_item" v-for="(cnt, index) in CountertServData" :key="index"  > 
 							<h5>
-								<vue3-autocounter :ref='`counter${index+1}`' :startAmount='0' :endAmount='cnt.counter' :duration='3' separator=',' decimalSeparator='.' :decimals='0' :autoinit='false'/>
+								<vue3-autocounter :ref='`counter${index+1}`' :startAmount='0' :endAmount='cnt.counter' :duration='2' separator=',' decimalSeparator='.' :decimals='0' :autoinit='false'/>
 							</h5>
 						<span>{{ cnt.type }}</span>
 						</div>
@@ -112,7 +112,7 @@ $font_Prata: 'Prata';
 }
 @media screen and (max-width: 760px){
 	.clients{
-		padding-bottom: 50px;
+		padding-bottom: 0px;
 		padding-top: 50px;
 		.counter {
 			display: grid;

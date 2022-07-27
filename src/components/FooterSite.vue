@@ -96,7 +96,6 @@
 			Subscribe to our newsletter to stay updated for new products and
 			stunnning news.
 		</p>
-		
 <div v-if="answer.success" role="alert">
 	<div class="sendSubmit">{{ answer.text }}</div>
 </div>
@@ -377,8 +376,13 @@ h4 {
 	}
 }
 .fot_top .subscribe .err_text {
-    top: -62px;
+	top: -62px;
 }
+.fot_top .subscribe .sendSubmit,
+	.fot_top .subscribe .errSubmit{
+	position: absolute;
+	bottom: 116px;
+	}
 }
 @media screen and (max-width: 760px) {
 footer {
@@ -418,6 +422,15 @@ footer {
 	.fot_top .subscribe p,
 	.fot_top .logo_soc p {
 		width: 333px;
+	}
+	.fot_top .subscribe .sendSubmit,
+	.fot_top .subscribe .errSubmit{
+	position: absolute;
+	bottom: 129px;
+	}
+	.fot_top .subscribe .err_text {
+    top: -55px;
+    right: -20px;
 	}
 }
 @media screen and (max-width: 400px) {

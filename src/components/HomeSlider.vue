@@ -208,6 +208,19 @@ font-family: $font_Prata;
 		font-size: 60px;
 		}
 	}
+	.carousel__prev {
+		top: 82%;
+		left: -35px;
+	}
+	.carousel__next {
+	top: 92%;
+	left: -96px;
+	}
+	.carousel__pagination {
+		top: 45%;
+		left: -59px;
+	}
+
 }
 #invest .slider p {
 font-size: 1rem;
@@ -254,19 +267,21 @@ font-size: 1rem;
 		height: auto;
 	}
 	#invest .carousel__prev {
-	top: 69%;
+	top: 77%;
 	left: -50px;
 	}
-	#invest.car ousel__next {
-	top: 80%;
+	#invest .carousel__next {
+    top: 89%;
+    left: -108px;
 	}
-	.carousel__pagination {
-	top: 35%;
+	#invest .carousel__pagination {
+    top: 41%;
+    left: -72px;
 	}
 }
 @media screen and (max-width: 400px){
 	#invest .slider h1 {
-		padding: 46px 0 17px 0px;
+		padding: 76px 0 17px 0px;
 	}
 	.carousel__prev {
 	top: 59%;

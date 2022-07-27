@@ -274,7 +274,6 @@ export default {
 		width: 300px;
 		&_item {
 			p {
-				margin-bottom: 20px;
 				width: 320px;
 			}
 			&_form {

@@ -154,6 +154,7 @@ export default {
 		svg {
 			height: 80px;
 			width: 100px;
+			margin-left: 3px;
 			}
 	}
 	.clients img {
@@ -177,7 +178,7 @@ export default {
 }
 @media screen and (max-width: 580px){
 	.clients .comment_item {
-		width: 330px;
+		width: 300px;
 	}
 	.clients .comment_item {
 		h5 {
@@ -191,7 +192,7 @@ export default {
 		.comment_item {
 			h5 {
 			font-size: 4rem;
-			}
+			}	
 		}
 	}
 }

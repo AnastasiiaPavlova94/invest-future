@@ -6,24 +6,19 @@
 	
 	<div class="blog" v-if="NewsData!==null">
 		<div class="blog_post" v-for="(item, index) in NewsData" :key="index">
-		<div class="img">
-			<router-link :to="{name: 'BlogCard', params:{title: item.title }}" class="linkTitle">
-				<img  v-if="item.urlToImage!==null" class="img_anim" :src="item.urlToImage" alt="post1" @error="errorImg" />
-				<img  v-else class="img_anim" :src="require('@/assets/img/plaseholder.png')" alt="post1" />
-			</router-link>
-		</div>
-		<div class="blog_post_content">
-			<h5 >{{newDataFormated}}</h5>
+			<router-link :to="{name: 'BlogCard', params:{title: item.title }}"></router-link>
+				<div class="img">
+						<img  v-if="item.urlToImage!==null" class="img_anim" :src="item.urlToImage" alt="post1" @error="errorImg" />
+						<img  v-else class="img_anim" :src="require('@/assets/img/plaseholder.png')" alt="post1" />
+				</div>
+				<div class="blog_post_content">
+					<h5 >{{newDataFormated}}</h5>
+							<h4>{{ item.title }}</h4>
+					<p v-html="item.description"></p>
+				</div>
 				<router-link :to="{name: 'BlogCard', params:{title: item.title }}">
-					<h4>{{ item.title }}</h4>
-				</router-link>
-			<p v-html="item.description"></p>
-				
-			
-		</div>
-		<router-link :to="{name: 'BlogCard', params:{title: item.title }}">
-					<span>Read More</span>
-				</router-link>
+							<span>Read More</span>
+						</router-link>
 		</div>
 	</div>
 </div>
