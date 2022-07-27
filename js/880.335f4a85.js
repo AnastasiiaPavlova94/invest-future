@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkinvest_future"]=self["webpackChunkinvest_future"]||[]).push([[880,27],{7325:function(n,e,t){t.r(e),t.d(e,{default:function(){return o}});var u=t(3396);function r(n,e,t,r,s,c){const f=(0,u.up)("invest-section");return(0,u.wg)(),(0,u.j4)(f)}var s=t(7126),c={components:{InvestSection:s["default"]}},f=t(89);const i=(0,f.Z)(c,[["render",r]]);var o=i}}]);
-//# sourceMappingURL=880.335f4a85.js.map
