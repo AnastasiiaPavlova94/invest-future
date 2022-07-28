@@ -281,7 +281,7 @@ font-size: 1rem;
 }
 @media screen and (max-width: 400px){
 	#invest .slider h1 {
-		padding: 76px 0 17px 0px;
+		padding: 125px 0 17px 0px;
 	}
 	.carousel__prev {
 	top: 59%;
