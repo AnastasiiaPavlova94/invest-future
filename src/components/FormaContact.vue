@@ -91,8 +91,8 @@
 export default {
  data() {
 	return {
-	API_BOT_ID: "5486762126:AAH3TbZphDqriVs9rte6vO64e9PrblSUxL0",
-	CHAT_ID: "-1001603625626",
+	API_BOT_ID: "5489874063:AAHDyKzsTEFbbY-_uDoSQWtmOqaf-rh5NqU",
+	CHAT_ID: "-1001460949130",
 	firstName: "",
 	lastName: "",
 	email: "",
